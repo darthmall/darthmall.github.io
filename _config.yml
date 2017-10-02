@@ -30,6 +30,10 @@ defaults:
       type: projects
     values:
       layout: project
+      
+sass:
+  sass_dir: _sass
+  style: compressed
 
 collections:
   projects:

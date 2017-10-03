@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Evan Sheehan
+title: About
 permalink: /about/
 ---
 

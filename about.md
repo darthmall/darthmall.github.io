@@ -7,6 +7,9 @@ permalink: /about/
 I am curently a Designer for [Spotify](https://spotify.com)'s Data Mission,
 having been acqui-hired when Spotify purchased
 [Seed Scientific](http://seedscientific.com), where I was a Design Technologist.
+
+![Evan Sheehan]({{ "assets/img/me.jpg" | relative_url }})
+
 At Spotify, as at Seed, I design and build visualizations and applications for
 data analysis. Previously I was IT Coordinator for the
 [National Museum of Mathematics](http://momath.org/), and before that a User

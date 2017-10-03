@@ -9,7 +9,8 @@
   <li class="grid-item">
     <a href="{{ project.url }}">
       <p>{{ project.title }}</p>
-      <img src="{{ project.thumbnail | relative_url }}" alt="">
+      {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
+      <img src="{{ thumbnail | relative_url }}" alt="">
     </a>
   </li>
 {% endfor %}

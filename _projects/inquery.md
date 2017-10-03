@@ -1,7 +1,7 @@
 ---
 title: "InQuery: Documentation Assistant"
 order: 2012-08
-thumbnail: assets/img/inquery/testing.png
+thumbnail: inquery/testing.png
 client: M*Modal
 ---
 

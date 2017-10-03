@@ -1,7 +1,7 @@
 ---
 title: Be a Tree
 order: 2012-05
-thumbnail: assets/img/be_a_tree/be_a_tree.png
+thumbnail: be_a_tree/be_a_tree.png
 ---
 
 <iframe class="video" src="https://player.vimeo.com/video/41874498" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

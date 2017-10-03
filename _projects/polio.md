@@ -1,7 +1,7 @@
 ---
 title: Polio Dashboard
 order: 2015-05
-thumbnail: assets/img/polio/dashboard.png
+thumbnail: polio/dashboard.png
 client: UNICEF
 ---
 

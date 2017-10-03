@@ -1,18 +1,23 @@
 ---
 layout: page
-title: About
+title: Evan Sheehan
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am curently a Designer for [Spotify](https://spotify.com)'s Data Mission,
+having been acqui-hired when Spotify purchased
+[Seed Scientific](http://seedscientific.com), where I was a Design Technologist.
+At Spotify, as at Seed, I design and build visualizations and applications for
+data analysis. Previously I was IT Coordinator for the
+[National Museum of Mathematics](http://momath.org/), and before that a User
+Experience Designer at [Schrödinger, Inc.](http://schrodinger.com/) where I
+designed and tested user interfaces used by computational chemists in the
+pharmaceutical industry to design drugs.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I also have extensive software development experience, primarily for the web
+using Python and JavaScript. My development experience has focused primarily on
+user interface development and data visualization.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+In 2012 I received my Masters of Human-Computer Interaction from the
+[Human-Computer Interaction Institute](http://www.hcii.cmu.edu/masters-program-pittsburgh)
+at Carnegie Mellon University.

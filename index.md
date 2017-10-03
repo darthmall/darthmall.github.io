@@ -4,3 +4,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+I am a data visualization designer with [Spotify](https://spotify.com)'s Data
+Mission. [More about me.]({% link about.md %})

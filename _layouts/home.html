@@ -3,11 +3,14 @@
 {{ content }}
 
 <h1>Projects</h1>
-<ul>
-{% assign projects = site.projects | sort: 'date' | reverse %}
+<ul class="grid">
+{% assign projects = site.projects | sort: 'order' | reverse %}
 {% for project in projects %}
-  <li>
-    <a href="{{ project.url }}">{{ project.title }}</a>
+  <li class="grid-item">
+    <a href="{{ project.url }}">
+      <img src="{{ project.thumbnail | relative_url }}" alt="">
+      <p>{{ project.title }}</p>
+    </a>
   </li>
 {% endfor %}
 </ul>

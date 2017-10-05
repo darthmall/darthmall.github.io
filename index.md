@@ -5,5 +5,4 @@
 layout: home
 ---
 
-I am a data visualization designer with [Spotify](https://spotify.com)'s Data
-Mission. [More about me.]({% link about.md %})
+I am a designer and programmer who specializes in creating data visualizations for the web. I believe that design is fundamentally about people, and that through good design, data can augment our judgement and improve our ability to make decisions. [More about me.]({% link about.md %})

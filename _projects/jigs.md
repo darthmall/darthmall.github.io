@@ -2,9 +2,8 @@
 title: "Jigs: Visualized"
 order: 2012-08
 thumbnail: jigs/network.png
-project:
-  client: Personal
-  repo: https://github.com/darthmall/Irish-Tune-Visualization
+client: Personal
+repo: https://github.com/darthmall/Irish-Tune-Visualization
 ---
 
 ![A network of jigs connected by similarity]({{ "assets/img/jigs/network.png" | relative_url }})

@@ -6,7 +6,7 @@ client: Personal
 repo: https://github.com/darthmall/Irish-Tune-Visualization
 ---
 
-![A network of jigs connected by similarity]({{ "assets/img/jigs/network.png" | relative_url }})
+![A network of jigs connected by similarity]({% link assets/img/jigs/network.png %})
 
 ## Noise in the Key of D
 
@@ -33,9 +33,9 @@ These calculations were all performed with the help of a [Python][python] librar
 Originally I had wanted to show not only that the tunes in this corpus were very similar, but *how* they were similar; I wanted to highlight repeated phrases. To that end, some of my early iterations of these visualizations involved trying to represent the melodies of individual tunes to highlight where common phrases occur. Part of what I hoped to achieve here was to do for multiple tunes what Martin Wattenberg's [Shape of Song][shapeofsong] did for individual songs.
 
 <figure>
-  <img src="{{ "assets/img/jigs/gan_ainm-pianoroll.png" | relative_url }}" />
-  <img src="{{ "assets/img/jigs/babes_in_the_woods-barcode.png" | relative_url }}" />
-  <img src="{{ "assets/img/jigs/the_corkin_cross-line.png" | relative_url }}" />
+  <img src="{% link assets/img/jigs/gan_ainm-pianoroll.png %}" />
+  <img src="{% link assets/img/jigs/babes_in_the_woods-barcode.png %}" />
+  <img src="{% link assets/img/jigs/the_corkin_cross-line.png %}" />
   <figcaption>
     Various representations of overlapping melodies.
   </figcaption>

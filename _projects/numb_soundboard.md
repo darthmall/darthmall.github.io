@@ -20,7 +20,7 @@ I helped him write a simple soundboard application that mapped one or more sound
 
 ![A screenshot of the soundboard playing a sound effect of someone pouring wine]({% link assets/img/numb_soundboard/wine_pour.png %})
 
-Because the application was designed for use during live performances, I kept it dark so that it wouldn't create a distracting glow in a dark theater or ruin the Kyle's night vision. It presents a simple UI that indicates which sound effects are mapped to which keys for setup and testing. To facilitate monitoring during performances, the currently playing effect is highlighted and the top of the UI shows a progress bar for the currently playing sound effect. In case an effect was triggered by accident, there's a stop button shown next to each effect while it's playing.
+Because the application was designed for use during live performances, I kept it dark so that it wouldn't create a distracting glow in a dark theater or ruin Kyle's night vision. It presents a simple UI that indicates which sound effects are mapped to which keys for setup and testing. To facilitate monitoring during performances, the currently playing effect is highlighted and the top of the UI shows a progress bar for the currently playing sound effect. In case an effect was triggered by accident, there's a stop button shown next to each effect while it's playing.
 
 The application was configured using a [JSON file][config] that mapped an array of sound files to a key, making it easy to add, remove, or reorder sounds without having to make any changes to the software.
 

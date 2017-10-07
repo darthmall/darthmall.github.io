@@ -1,14 +1,48 @@
 body
+  color: $text-color
   font-family: $body-font
   font-size: $font-size
   font-weight: 400
   line-height: $line-height
+
+a
+  color: $text-color
+  text-decoration: none
+
+p
+  margin: 0
+  margin-bottom: $sm
+
+p > a
+  color: $link-color
+  text-decoration: underline
+  
+h1
+  font-family: $header-font
+  font-size: $xl
+  font-weight: bold
+  letter-spacing: 1.5px
+  text-transform: uppercase
+
+h2
+  font-family: $subheader-font
+  font-size: $lg
+  margin: 0
+  padding: $xs 0
+  
+::selection
+  background-color: $selection-color
+  
+::-moz-selection
+  background-color: $selection-color
   
 .site-header
+  color: $red
   text-align: center
   margin: $xl 0
   
 .title
+  color: inherit
   display: inline-block
   font-family: $header-font
   font-weight: bold
@@ -16,16 +50,12 @@ body
   letter-spacing: 1px
   text-transform: uppercase
   line-height: $xl
-  border-top: 1px solid black
-  border-bottom: 1px solid black
+  border-top: 1px solid $text-color
+  border-bottom: 1px solid $text-color
   padding: $xs $font-size
-  
-h1
-  font-family: $header-font
-  font-size: $xl
-  font-weight: bold
-  text-transform: uppercase
 
-h2
-  font-family: $subheader-font
+.bio
   font-size: $lg
+  line-height: $ratio
+  padding: $xxl 0
+  margin: $xxxl 0

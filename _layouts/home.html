@@ -1,19 +1,23 @@
 {% include header.html %}
+<main>
 
 {{ content }}
 
 <h1>Projects</h1>
-<ul class="grid">
+<nav>
 {% assign projects = site.projects | sort: 'order' | reverse %}
 {% for project in projects %}
-  <li class="grid-item">
-    <a href="{{ project.url }}">
-      <p>{{ project.title }}</p>
+  <a href="{{ project.url }}">
+    <article class="project-abstract">
+      <div class="description">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.abstract }}</p>
+      </div>
       {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
-      <img src="{{ thumbnail | relative_url }}" alt="">
-    </a>
-  </li>
+      <img class="cover" src="{{ thumbnail | relative_url }}" alt="">
+    </article>
+  </a>
 {% endfor %}
-</ul>
-
+</nav>
+</main>
 {% include footer.html %}

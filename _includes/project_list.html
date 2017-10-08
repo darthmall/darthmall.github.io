@@ -1,0 +1,15 @@
+<nav>
+{% assign projects = site.projects | sort: 'order' | reverse %}
+{% for project in projects %}
+  <a href="{{ project.url }}">
+    <article class="project-abstract">
+      <div class="description">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.abstract }}</p>
+      </div>
+      {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
+      <img class="cover" src="{{ thumbnail | relative_url }}" alt="">
+    </article>
+  </a>
+{% endfor %}
+</nav>

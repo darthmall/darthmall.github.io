@@ -1,5 +1,25 @@
 <footer>
-  <p>&copy; 2017 Evan Sheehan</p>
+  <p>
+    &copy; 2017 Evan Sheehan
+  </p>
+  <p>
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </p>
+  <p>
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">{{ site.twitter_username }}</a>
+  </p>
+  <p>
+    <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username}}</a>
+  </p>
+  <nav>
+    <ul>
+      <li><a href="{% link index.md %}">Home</a></li>
+      <li><a href="{% link about.md %}">About</a></li>
+    </ul>
+  </nav>
+  <p>
+    Color scheme courtesy of <a href="https://www.webdesignrankings.com/resources/lolcolors/">LOLCOLORS</a>.
+  </p>
 </footer>
 
 </body>

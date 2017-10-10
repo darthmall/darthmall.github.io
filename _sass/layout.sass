@@ -5,6 +5,21 @@ img
   margin: 0
   max-width: 100%
   
+footer
+  border-top: 1px solid $text-color
+  font-size: $sm
+  margin-top: $xxl
+  padding-bottom: $lg
+  padding-top: $xs
+  
+  div
+    display: grid
+    grid-gap: $gutter
+    grid-template-columns: 1fr 1fr
+  
+  * + *
+    margin-top: 0
+
 .project-list
   list-style: none
   padding: 0

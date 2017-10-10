@@ -3,32 +3,43 @@ body
   font-family: $body-font
   font-size: $font-size
   font-weight: 400
+  letter-spacing: .4px
   line-height: $line-height
+  margin: 0
+  
+  & > header
+    letter-spacing: 5px
+    margin-bottom: $xxxl
+    margin-top: $gutter
+    text-align: center
+    text-transform: uppercase
+    
+    a
+      border: 1px $primary-color solid
+      color: $primary-color
+      display: inline-block
+      padding: $gutter $lg
+      text-decoration: none
 
 a
-  color: $text-color
-  text-decoration: none
-
-p
-  margin: 0
-  margin-bottom: $sm
-
-p > a
   color: $link-color
-  text-decoration: underline
   
-h1
-  font-family: $header-font
-  font-size: $xl
-  font-weight: bold
-  letter-spacing: 1.5px
-  text-transform: uppercase
+p, h1, h2
+  margin-bottom: 0
+  margin-left: $gutter/2
+  margin-right: $gutter/2
 
 h2
-  font-family: $subheader-font
-  font-size: $lg
-  margin: 0
-  padding: $xs 0
+  letter-spacing: 1px
+  font-weight: 400
+  margin: 0 $gutter/2
+  text-transform: uppercase
+  
+  * + &
+    margin-top: $lg
+    
+  & + p
+    margin-top: 0
   
 ::selection
   background-color: $selection-color
@@ -36,28 +47,11 @@ h2
 ::-moz-selection
   background-color: $selection-color
   
-.site-header
-  color: $red
-  text-align: center
-  margin: $xl 0
-  
-.title
-  color: inherit
-  display: inline-block
-  font-family: $header-font
-  font-weight: bold
-  font-size: $font-size
-  letter-spacing: 1px
-  text-transform: uppercase
-  line-height: $xl
-  border-top: 1px solid $text-color
-  border-bottom: 1px solid $text-color
-  padding: $xs $font-size
-
-.bio
-  font-family: "Merriweather", serif
-  font-size: $lg
+.abstract
+  font-family: $italic-font
   font-style: italic
-  line-height: $ratio
-  padding: $xxl 0
-  margin: $xxxl 0
+  
+@media screen and (min-width: $sm-screen)
+  p, h1, h2, h3
+    margin-left: 0
+    margin-right: 0

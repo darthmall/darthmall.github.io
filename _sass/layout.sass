@@ -1,25 +1,41 @@
-body
-  margin: $sm
-
-.site-header
-  text-align: center
+* + *
+  margin-top: $gutter
   
 img
-  margin: 0
-  padding: 0
   max-width: 100%
   
-.project-abstract
-  margin-bottom: $lg
+.project-list
+  list-style: none
+  padding: 0
   
-.profile
-  float: left
-  width: 50%
-  margin-right: $gutter
-  margin-bottom: $gutter
-  max-width: 768px / 4
+  a
+    color: $text-color
+    text-decoration: none
+    
+  li
+    position: relative
+    
+    &:hover,
+    &:focus
+      p
+        opacity: 1
+        
+      img
+        opacity: 0.3
+    
+  p
+    opacity: 0
+    position: absolute
+    text-align: center
+    top: 50%
+    left: $gutter
+    right: $gutter
+    transition: opacity 200ms ease-in-out
+    
+  img
+    transition: opacity 200ms ease-in-out
   
-@media screen and (min-width: 768px)
+@media screen and (min-width: $sm-screen)
   body
     margin: auto
     max-width: 768px - $sm - $sm

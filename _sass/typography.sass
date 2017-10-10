@@ -14,7 +14,8 @@ body
     text-align: center
     text-transform: uppercase
     
-    a
+    a,
+    a:visited
       border: 1px $primary-color solid
       color: $primary-color
       display: inline-block
@@ -23,6 +24,14 @@ body
 
 a
   color: $link-color
+  transition: color 150ms linear
+  
+  &:hover,
+  &:focus
+    color: $primary-color !important
+    
+  &:visited
+    color: darken($link-color, 30%)
   
 p, h1, h2, h3, aside
   margin-bottom: 0

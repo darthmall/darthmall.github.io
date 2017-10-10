@@ -29,8 +29,12 @@ p, h1, h2, h3, aside
   margin-left: $gutter/2
   margin-right: $gutter/2
   
+h1
+  font-size: $xl
+  
 h2
   letter-spacing: 1px
+  font-size: $lg
   font-weight: 400
   margin: 0 $gutter/2
   text-transform: uppercase
@@ -41,6 +45,8 @@ h2
   & + p
     margin-top: 0
   
+h3
+  font-size: $md
 ::selection
   background-color: $selection-color
   
@@ -49,8 +55,14 @@ h2
   
 .abstract
   font-family: $italic-font
+  font-size: $lg
   font-style: italic
   
+.project-list
+  p
+    font-family: $italic-font
+    font-style: italic
+
 @media screen and (min-width: $sm-screen)
   p, h1, h2, h3
     margin-left: 0

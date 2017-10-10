@@ -4,7 +4,7 @@
     <li>
       <a href="{{ project.url }}">
         <h3>{{ project.title }}</h3>
-        <p class="abstract">{{ project.abstract }}</p>
+        <p>{{ project.abstract }}</p>
         
         {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
         <img class="cover" src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">

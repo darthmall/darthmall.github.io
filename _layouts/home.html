@@ -1,9 +1,12 @@
 {% include header.html %}
 <main>
 
-  <p class="abstract">
-    {{ site.description }} <a href="{% link about.md %}">More about me.</a>
-  </p>
+  <div class="jumbotron">
+    <p class="abstract">
+      {{ site.description }}
+    </p>
+    <p><a href="{% link about.md %}">More about me&hellip;</a></p>
+  </div>
 
   <h2>Projects</h2>
   {% include project_list.html %}

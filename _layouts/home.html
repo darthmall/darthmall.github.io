@@ -1,19 +1,12 @@
 {% include header.html %}
 <main>
 
-  <h1>My Portfolio</h1>
-  
-  <section>
-    <h2>Nice to meet you</h2>
-    <p class="abstract">
-      {{ site.description }} <a href="{% link about.md %}">More about me.</a>
-    </p>
-  </section>
+  <p class="abstract">
+    {{ site.description }} <a href="{% link about.md %}">More about me.</a>
+  </p>
 
-  <section>
-    <h2>Projects</h2>
-    {% include project_list.html %}
-  </section>
+  <h2>Projects</h2>
+  {% include project_list.html %}
   
 </main>
 {% include footer.html %}

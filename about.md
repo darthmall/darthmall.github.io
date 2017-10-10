@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+classes: about
 ---
 
 <img class="float" src="{% link assets/img/me.jpg %}"

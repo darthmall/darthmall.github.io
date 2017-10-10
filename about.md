@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-<img class="profile" src="{% link assets/img/me.jpg %}"
-  alt="Evan Sheehan" />
+<img class="float" src="{% link assets/img/me.jpg %}"
+  alt="Me at a ski resort in Norway" />
 
 I am curently a Designer for [Spotify](https://spotify.com)'s Data Mission,
 having been acqui-hired when Spotify purchased

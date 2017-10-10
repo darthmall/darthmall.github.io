@@ -1,0 +1,97 @@
+body
+  color: $text-color
+  font-family: $body-font
+  font-size: $font-size
+  font-weight: 400
+  letter-spacing: .4px
+  line-height: $line-height
+  margin: 0
+  
+  & > header
+    letter-spacing: 5px
+    margin-bottom: $xxxl
+    margin-top: $gutter
+    text-align: center
+    text-transform: uppercase
+    
+    a,
+    a:visited
+      border: 1px $primary-color solid
+      color: $primary-color
+      display: inline-block
+      padding: $gutter $lg
+      text-decoration: none
+
+a
+  color: $link-color
+  transition: color 150ms linear
+  
+  &:hover,
+  &:focus
+    color: $primary-color !important
+    
+  &:visited
+    color: darken($link-color, 30%)
+  
+p, h1, h2, h3, aside
+  margin-bottom: 0
+  margin-left: $gutter/2
+  margin-right: $gutter/2
+  
+h1
+  font-size: $xl
+  
+h2
+  letter-spacing: 1px
+  font-size: $lg
+  font-weight: 400
+  margin: 0 $gutter/2
+  text-transform: uppercase
+  
+  * + &
+    margin-top: $lg
+    
+  & + p
+    margin-top: 0
+  
+h3
+  font-size: $md
+  
+dt
+  margin: 0
+  text-align: right
+  
+  &:after
+    content: ":"
+  
+dd
+  margin: 0
+  
+nav
+  ul
+    list-style: none
+    padding: 0
+
+address
+  font-style: normal
+  
+::selection
+  background-color: $selection-color
+  
+::-moz-selection
+  background-color: $selection-color
+  
+.abstract
+  font-family: $italic-font
+  font-size: $lg
+  font-style: italic
+  
+.project-list
+  p
+    font-family: $italic-font
+    font-style: italic
+
+@media screen and (min-width: $sm-screen)
+  p, h1, h2, h3
+    margin-left: 0
+    margin-right: 0

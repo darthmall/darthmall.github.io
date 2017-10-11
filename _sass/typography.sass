@@ -61,12 +61,17 @@ h2
 h3
   font-size: $md
   
+dl
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+
 dt
+  font-size: $sm
   margin: 0
-  text-align: right
+  text-transform: uppercase
   
-  &:after
-    content: ":"
+  dd + &
+    margin-top: $gutter
   
 dd
   margin: 0

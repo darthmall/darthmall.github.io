@@ -7,20 +7,23 @@ body
   line-height: $line-height
   margin: 0
   
-  & > header
-    letter-spacing: 5px
-    margin-bottom: $xxxl
-    margin-top: $gutter
-    text-align: center
-    text-transform: uppercase
-    
-    a,
-    a:visited
-      border: 1px $primary-color solid
-      color: $primary-color
-      display: inline-block
-      padding: $gutter $lg
-      text-decoration: none
+header
+  border-color: $primary-color
+  color: $primary-color
+  letter-spacing: 5px
+  margin-bottom: $xxxl
+  margin-top: $gutter
+  text-align: center
+  text-transform: uppercase
+  
+  a,
+  a:visited
+    border-style: solid
+    border-width: 1px
+    color: inherit
+    display: inline-block
+    padding: $gutter $lg
+    text-decoration: none
 
 a
   color: $link-color
@@ -85,6 +88,7 @@ address
   font-family: $italic-font
   font-size: $lg
   font-style: italic
+  text-align: center
   
 .project-list
   p

@@ -1,15 +1,16 @@
 {% include header.html %}
-<main>
-
-  <div class="jumbotron">
+  <section class="cover">
+    {% include banner.html %}
     <p class="abstract">
       {{ site.description }}
     </p>
     <p><a href="{% link about.md %}">More about me&hellip;</a></p>
-  </div>
+  </section>
 
-  <h2>Projects</h2>
-  {% include project_list.html %}
+  <section>
+    <h2>Projects</h2>
+    {% include project_list.html %}
+  </section>
   
 </main>
 {% include footer.html %}

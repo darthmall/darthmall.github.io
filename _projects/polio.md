@@ -12,7 +12,7 @@ abstract: >-
 
 <aside class="disclaimer">All data shown in these mockups is fake.</aside>
 
-## <abbr title="Global Polio Eradication Initiative">GPEI</abbr>
+## GPEI
 
 [UNICEF](unicef) is one of the five core partners in the
 [Global Polio Eradication Initiative](gpei) (GPEI) working to eradicate polio from the

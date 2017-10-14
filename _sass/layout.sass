@@ -1,82 +1,63 @@
 * + *
-  margin-top: $gutter
+  margin-top: $xl
   
 img
-  margin: 0
   max-width: 100%
   
-dl
-  display: grid
-  grid-column-gap: $gutter
-  grid-template-columns: min-content 1fr
+* + section
+  margin-top: $xxl
   
 footer
   border-top: 1px solid $text-color
   font-size: $sm
+  line-height: $line-height
   margin-top: $xxl
   padding-bottom: $lg
   padding-top: $xs
   
-  div
-    display: grid
-    grid-gap: $gutter
-    grid-template-columns: 1fr 1fr
-  
-  * + *
-    margin-top: 0
+  & > *
+    margin-left: $gutter / 2
+    margin-right: $gutter / 2
+    
+    & *
+      margin-left: 0
+      margin-right: 0
+
+  * + *,
+  p + p
+    margin-top: $xxs
 
 .project-list
   list-style: none
   padding: 0
   
-  a, a:hover, a:focus, a:visited
-    color: inherit !important
-    text-decoration: inherit !important
+  a
+    color: $text-color
+    text-decoration: none
     
-  li
-    position: relative
+    img, h3, p
+      margin-top: $xs
+      margin-bottom: $xs
     
-    &:hover,
-    &:focus
-      p
-        opacity: 1
-        
-      img
-        opacity: 0.3
-    
-  p
-    opacity: 0
-    position: absolute
-    text-align: center
-    top: 50%
-    left: $gutter
-    right: $gutter
-    transition: opacity 200ms ease-in-out
-    
-  img
-    transition: opacity 200ms ease-in-out
-  
-.jumbotron
+.cover
+  background: linear-gradient(to bottom, $primary-color, $primary-color 50%, #fff)
   display: flex
   flex-direction: column
   justify-content: center
-  min-height: 50vh
+  // Minimum height for an iPhone 5, otherwise, scale to fit the screen
+  min-height: 568px
+  height: 100vh
+  text-align: center
+  
+  header, a
+    color: $text-color
+    border-color: $text-color
   
 .float
   float: left
   margin-right: $gutter
   
-@media screen and (min-width: $sm-screen)
-  body
-    margin: auto
-    max-width: 768px - $sm - $sm
-    
-  .project-list li
-    &:hover,
-    &:focus
-      img
-        opacity: 1
-
+@media screen and (min-width: $sm-screen)    
   .project-list a
     display: grid
     grid-gap: $gutter
@@ -99,3 +80,9 @@ footer
       opacity: 1
       position: static
       text-align: left
+      
+  footer
+    div
+      display: grid
+      grid-gap: $gutter
+      grid-template-columns: 1fr 1fr

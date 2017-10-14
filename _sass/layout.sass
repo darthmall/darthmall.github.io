@@ -36,11 +36,13 @@ footer
     text-decoration: none
     
 .cover
-  background: linear-gradient(to bottom, $primary-color, $primary-color 60%, #fff)
+  background: linear-gradient(to bottom, $primary-color, $primary-color 50%, #fff)
   display: flex
   flex-direction: column
   justify-content: center
-  min-height: 100vh
+  // Minimum height for an iPhone 5, otherwise, scale to fit the screen
+  min-height: 568px
+  height: 100vh
   text-align: center
   
   header, a

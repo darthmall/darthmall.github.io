@@ -18,9 +18,11 @@ email: wallace.sheehan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I am a designer and programmer who specializes in creating data visualizations for the web.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://darthmall.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+full_name: W. Evan Sheehan
 twitter_username: darth_mall
 github_username:  darthmall
+location: Brooklyn, NY
 
 defaults:
   - scope:

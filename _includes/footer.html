@@ -1,5 +1,13 @@
 <footer>
   <div>
+    <nav>
+      <ul>
+        <li><a href="{% link index.md %}">Home</a></li>
+        <li><a href="{% link about/index.md %}">About</a></li>
+        <li><a href="{% link about/resume.html %}">Resume</a></li>
+      </ul>
+    </nav>
+    
     <address>
       <p>
         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -13,16 +21,16 @@
         <i class="fa fa-github" aria-hidden="true"></i>
         <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
       </p>
+      <p>
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        {{ site.location }}
+      </p>
     </address>
-    <nav>
-      <ul>
-        <li><a href="{% link index.md %}">Home</a></li>
-        <li><a href="{% link about.md %}">About</a></li>
-      </ul>
-    </nav>
+    
     <p class="copyright">
       &copy; 2017 Evan Sheehan
     </p>
+    
     <p>
       Color scheme courtesy of <a href="https://www.webdesignrankings.com/resources/lolcolors/">LOLCOLORS</a>.
     </p>

@@ -1,0 +1,23 @@
+.resume
+  ul
+    +list-unstyled
+
+.degree
+  display: block
+
+.school
+  +italic
+    
+  &::after
+    content: ","
+    
+.graduation-date
+  +italic
+  
+.programming-language
+  li
+    +list-item-inline
+    +italic
+      
+    &:not(:last-child)::after
+      content: ","

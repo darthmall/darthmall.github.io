@@ -1,29 +1,36 @@
+=bold
+  font-family: $sans-serif
+  font-weight: 700
+  
+=italic
+  font-family: $serif
+  font-style: italic
+
+html
+  font-size: 100%
+  
 body
   color: $text-color
-  font-family: $body-font
-  font-size: $font-size
+  font-family: $sans-serif
   font-weight: 400
+  font-size: $font-size
   line-height: $line-height
   margin: 0
   
-header
-  border-color: $primary-color
-  color: $primary-color
-  letter-spacing: 5px
-  margin-top: $gutter
-  text-align: center
-  text-transform: uppercase
+h1
+  +bold
+  font-size: ms(1)
   
-  a,
-  a:hover,
-  a:visited
-    border-style: solid
-    border-width: 1px
-    color: inherit
-    display: inline-block
-    padding: $gutter $lg
-    text-decoration: none
-
+h2
+  +bold
+  font-size: ms(1)
+  
+h3
+  font-size: ms(0)
+  
+p
+  font-size: ms(0)
+  
 a
   color: $link-color
   transition: color 150ms linear
@@ -39,49 +46,22 @@ a
 p, dl, h1, h2, h3, aside
   line-height: $line-height
   margin-bottom: 0
-  margin-left: $gutter
-  margin-right: $gutter
 
 p + p
-  margin-top: $line-height
+  margin-top: ms(-1)
   
 h1 + p
-  margin-top: $xs
+  margin-top: ms(-1)
 
-h1
-  font-size: $xl
-  
-h2
-  font-size: $lg
-  letter-spacing: .5px
-  margin: 0 $gutter/2
-  
-  * + &
-    margin-top: $lg
-    
-  & + p
-    margin-top: 0
-  
-h3
-  font-size: $md
-  
 dt
-  font-size: $sm
-  line-height: 1em
+  font-size: ms(-1)
+  line-height: ms(0)
   margin: 0
   text-transform: uppercase
-  
-  dd + &
-    margin-top: $gutter
   
 dd
   margin: 0
   
-nav
-  ul
-    list-style: none
-    padding: 0
-
 address
   font-style: normal
   
@@ -92,22 +72,10 @@ address
   background-color: $selection-color
   
 .abstract
-  font-family: $italic-font
-  font-size: $lg
-  font-style: italic
-  line-height: 1.4em
+  +italic
+  font-size: ms(1)
   text-align: inherit
   
 .project-list
   p
-    font-family: $italic-font
-    font-style: italic
-
-@media screen and (min-width: $sm-screen)
-  p, h1, h2, h3, dl, ul, aside, footer
-    margin-left: auto
-    margin-right: auto
-    max-width: $measure
-    
-  .cover .abstract
-    font-size: $xl
+    +italic

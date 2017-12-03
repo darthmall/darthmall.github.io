@@ -39,6 +39,8 @@ collections:
   projects:
     output: true
     permalink: :collection/:name
+  career:
+    output: false
 
 # Build settings
 markdown: kramdown

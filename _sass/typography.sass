@@ -4,6 +4,10 @@
 =bold
   font-weight: 700
 
+=side-margins
+  padding-left: ms(0)
+  padding-right: ms(0)
+  
 html
   font-size: 100%
   
@@ -13,7 +17,18 @@ body
   font-weight: 400
   font-size: $font-size
   line-height: $line-height
-  margin: ms(-2)
+  margin: 0
+
+header
+  padding-top: ms(-1)
+  +side-margins
+    
+main
+  +side-margins
+    
+footer
+  padding-bottom: ms(1)  
+  +side-margins
   
 h2
   +light

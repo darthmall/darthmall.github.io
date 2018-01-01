@@ -15,11 +15,12 @@
   tools:
     - Django
     - Flask
-    - Pandas
-    - Seaborn
     - PyGTK
 - 
   name: SQL
+  tools:
+    - BigQuery
+    - MySQL
 - 
   name: Java
   tools:

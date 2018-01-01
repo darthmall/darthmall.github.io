@@ -8,10 +8,19 @@
 =list-comma-separated
   +list-unstyled
     
+  ul
+    display: inline
+    
+    &::before
+      content: "("
+    
+    &::after
+      content: ")"
+    
   li
     +list-item-inline
     &:not(:last-child)::after
-      content: ","
+      content: ", "
 
 ul, ol
   margin: 0

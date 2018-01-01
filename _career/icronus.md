@@ -1,5 +1,5 @@
 ---
-company: University of Colorado at Boulder
+company: University of Colorado
 title: Research Assistant
 from: 2005-07
 to: 2006-08

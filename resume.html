@@ -20,11 +20,15 @@ permalink: /resume
     <section>
       {% assign jobs = site.career | sort: "from" | reverse %}
       {% for job in jobs %}
-        <h3>{{ job.company }}&ensp;<small>
-          {{ job.from | split: "-" | first }}
-          to
-          {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
-        </small></h3>
+        {% if job.exclude %}{% continue %}{% endif %}
+        <h3>
+          {{ job.company }}
+          <small>
+            {{ job.from | split: "-" | first }}
+            to
+            {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
+          </small>
+        </h3>
         <h4>{{ job.title }}</h4>
         <p>{{ job.content }}</p>
       {% endfor %}

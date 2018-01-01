@@ -1,5 +1,5 @@
 ---
-company: National Museum of Mathematics
+company: MoMATH
 title: IT Coordinator
 from: 2014-01
 to: 2014-06

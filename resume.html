@@ -1,19 +1,16 @@
 ---
 title: Resume
-permalink: /about/resume/
 classes: resume
 ---
 {% include header.html %}
-{% include banner.html %}
 <main>
   <section id="education">
     <h2>Education</h2>
     <ul>
       {% for ed in site.data.education %}
-      <li>
-        <span class="degree">{{ ed.degree }}</span>
-        <span class="school">{{ ed.school }}</span>
-        <span class="graduation-date">{{ ed.graduated }}</span>
+      <li class="degree">
+        <h3 >{{ ed.degree }}</h3>
+        <p>{{ ed.school }}, {{ ed.graduated }}</p>
       </li>
       {% endfor %}
     </ul>
@@ -25,8 +22,8 @@ classes: resume
       {% assign jobs = site.career | sort: "from" | reverse %}
       {% for job in jobs %}
         <h3>{{ job.title }}</h3>
-        <p class="company">{{ job.company }}</p>
-        <p class="period">
+        <p>
+          {{ job.company }},
           {{ job.from | split: "-" | first }}
           to
           {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
@@ -54,7 +51,7 @@ classes: resume
     </ul>
     {% for set in site.data.skills %}
       <h3>{{ set.category }}</h3>
-      <ul>
+      <ul class="{{ set.category | downcase }}">
         {% for skill in set.skills %}
           <li>{{ skill }}</li>
         {% endfor %}

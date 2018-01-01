@@ -43,6 +43,13 @@ h3
   margin-top: ms(1)
   margin-bottom: 0
   
+h4
+  color: $tertiary-color
+  font-size: ms(0)
+  font-style: italic
+  line-height: 1
+  margin: 0
+  
 p
   font-size: ms(0)
   margin: 0
@@ -65,15 +72,13 @@ a
   &:visited
     color: darken($link-color, 30%)
   
-dt
-  font-size: ms(-1)
-  line-height: ms(0)
-  margin: 0
-  text-transform: uppercase
-  
-dd
-  margin: 0
-  
+small
+  +light
+  font-size: 1em
+  font-variant: small-caps
+  letter-spacing: 0.05em
+  text-transform: lowercase
+
 address
   font-style: normal
   

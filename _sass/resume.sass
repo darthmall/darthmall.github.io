@@ -1,23 +1,11 @@
-.resume
-  ul
-    +list-unstyled
+.resume main
+  p
+    +font-small
 
-.degree
-  display: block
-
-.school
-  +italic
-    
-  &::after
-    content: ","
-    
-.graduation-date
-  +italic
-  
 .programming-language
-  li
-    +list-item-inline
+  ul
+    +font-small
     +italic
-      
-    &:not(:last-child)::after
-      content: ","
+    line-height: ms(0)
+
+    +list-comma-separated

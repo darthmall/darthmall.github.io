@@ -7,14 +7,12 @@ permalink: /resume
 <main>
   <section id="education">
     <h2>Education</h2>
-    <ul>
+    <dl>
       {% for ed in site.data.education %}
-      <li class="degree">
-        <h3 >{{ ed.degree }}</h3>
-        <p>{{ ed.school }}, {{ ed.graduated }}</p>
-      </li>
+      <dt>{{ ed.field }}&ensp;<small>{{ ed.degree }}</small></dt>
+      <dd>{{ ed.school }}</dd>
       {% endfor %}
-    </ul>
+    </dl >
   </section>
   
   <section id="experience">
@@ -22,13 +20,12 @@ permalink: /resume
     <section>
       {% assign jobs = site.career | sort: "from" | reverse %}
       {% for job in jobs %}
-        <h3>{{ job.title }}</h3>
-        <p>
-          {{ job.company }},
+        <h3>{{ job.company }}&ensp;<small>
           {{ job.from | split: "-" | first }}
           to
           {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
-        </p>
+        </small></h3>
+        <h4>{{ job.title }}</h4>
         <p>{{ job.content }}</p>
       {% endfor %}
     </section>

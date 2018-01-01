@@ -13,5 +13,22 @@
     &:not(:last-child)::after
       content: ","
 
-ul, ol, dl
+ul, ol
   margin: 0
+  
+dl
+  margin: 0
+  line-height: 1.2
+  
+dt
+  font-size: ms(0)
+  +bold
+    
+dd
+  color: $tertiary-color
+  font-style: italic
+  margin: 0
+  
+* + dt
+  margin-top: ms(0)
+    

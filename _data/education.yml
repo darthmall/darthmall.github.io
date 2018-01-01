@@ -1,8 +1,10 @@
 -
   school: Carnegie Mellon University
-  degree: Masters of Human-Computer Interaction
+  degree: Masters
+  field: Human-Computer Interaction
   graduated: 2012
 -
   school: University of Colorado at Boulder
-  degree: Bachelors of Science in Computer Science
+  degree: Bachelors
+  field: Computer Science
   graduated: 2006

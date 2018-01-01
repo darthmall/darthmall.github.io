@@ -4,3 +4,14 @@
 
 =list-item-inline
   display: inline
+
+=list-comma-separated
+  +list-unstyled
+    
+  li
+    +list-item-inline
+    &:not(:last-child)::after
+      content: ","
+
+ul, ol, dl
+  margin: 0

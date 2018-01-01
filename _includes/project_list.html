@@ -4,8 +4,6 @@
     <li>
       <a href="{{ project.url }}">
         <h3>{{ project.title }}</h3>
-        <p>{{ project.abstract }}</p>
-        
         {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
         <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
       </a>

@@ -2,6 +2,7 @@
 layout: page
 title: About
 classes: about
+permalink: /about
 ---
 
 <img class="float" src="{% link assets/img/me.jpg %}"

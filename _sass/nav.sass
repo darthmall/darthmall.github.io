@@ -1,12 +1,14 @@
 nav
   margin-bottom: ms(3)
+  max-width: $sm-screen
   
   ul
     +list-unstyled
-    display: flex
-    flex-direction: row
-    justify-content: space-between
     
+  li
+    +list-item-inline
+    margin-right: $gutter
+
   a
     color: inherit
     text-transform: uppercase
@@ -17,3 +19,4 @@ nav
 
   .active
     +bold
+      

@@ -1,5 +1,17 @@
-body
-  padding: $gutter
+=sm-grid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: $gutter
   
-img
-  max-width: 100%
+=md-grid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: $gutter
+  
+@media screen and (min-width: $sm-screen)
+  .project-list
+    +sm-grid
+
+@media screen and (min-width: $md-screen)
+  .project-list
+    +md-grid

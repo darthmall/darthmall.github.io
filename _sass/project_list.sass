@@ -1,0 +1,23 @@
+.project-list
+  +list-unstyled
+    
+  a
+    color: inherit
+    text-decoration: none
+    
+    &:visited,
+    &:hover
+      color: inherit
+      
+  h3
+    margin-top: 0
+    
+  li + li
+    margin-top: ms(1)
+    
+@media screen and (min-width: $sm-screen)
+  .project-list
+    +sm-grid
+      
+    li + li
+      margin-top: 0

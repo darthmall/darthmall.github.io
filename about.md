@@ -1,12 +1,12 @@
 ---
 layout: page
 title: About
-permalink: /about/
 classes: about
+permalink: /about
 ---
 
 <img class="float" src="{% link assets/img/me.jpg %}"
-  alt="Me at a ski resort in Norway" />
+  alt="Me at an offsite with Spotify's Data Mission" />
 
 I am curently a Designer for [Spotify](https://spotify.com)'s Data Mission,
 having been acqui-hired when Spotify purchased

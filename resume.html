@@ -1,0 +1,61 @@
+---
+title: Resume
+classes: resume
+permalink: /resume
+---
+{% include header.html %}
+<main>
+  <section id="education">
+    <h2>Education</h2>
+    <dl>
+      {% for ed in site.data.education %}
+      <dt>{{ ed.field }}&ensp;<small>{{ ed.degree }}</small></dt>
+      <dd>{{ ed.school }}</dd>
+      {% endfor %}
+    </dl >
+  </section>
+  
+  <section id="experience">
+    <h2>Experience</h2>
+    <section>
+      {% assign jobs = site.career | sort: "from" | reverse %}
+      {% for job in jobs %}
+        {% if job.exclude %}{% continue %}{% endif %}
+        <h3>
+          {{ job.company }}
+          <small>
+            {{ job.from | split: "-" | first }}
+            to
+            {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
+          </small>
+        </h3>
+        <h4>{{ job.title }}</h4>
+        <p>{{ job.content }}</p>
+      {% endfor %}
+    </section>
+  </section>
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <h3>Programming</h3>
+    
+    <ul>
+      {% for lang in site.data.programming %}
+        <li class="programming-language">
+          {{ lang.name }}
+          {% if lang.tools %}
+            <ul>{% for tool in lang.tools %}<li>{{ tool }}</li>{% endfor %}</ul>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    
+    {% for set in site.data.skills %}
+      <h3>{{ set.category }}</h3>
+      <ul class="{{ set.category | downcase }}">
+        {% for skill in set.skills %}
+          <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+</main>
+{% include footer.html %}

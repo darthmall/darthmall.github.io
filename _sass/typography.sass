@@ -1,29 +1,77 @@
+=light
+  font-weight: 300
+  
+=bold
+  font-weight: 700
+
+=side-margins
+  padding-left: ms(1)
+  padding-right: ms(1)
+  
+html
+  font-size: $font-size
+  
 body
   color: $text-color
-  font-family: $body-font
-  font-size: $font-size
+  font-family: $sans-serif
   font-weight: 400
   line-height: $line-height
   margin: 0
-  
-header
-  border-color: $primary-color
-  color: $primary-color
-  letter-spacing: 5px
-  margin-top: $gutter
-  text-align: center
-  text-transform: uppercase
-  
-  a,
-  a:hover,
-  a:visited
-    border-style: solid
-    border-width: 1px
-    color: inherit
-    display: inline-block
-    padding: $gutter $lg
-    text-decoration: none
+  max-width: $md-screen
 
+header
+  padding-top: ms(-1)
+  +side-margins
+    
+main
+  +side-margins
+    
+footer
+  padding-bottom: ms(1)  
+  +side-margins
+  
+h1
+  font-size: ms(1)
+  font-weight: normal
+  line-height: 1.2
+  margin: ms(2) 0
+  max-width: $line-length
+
+h2
+  +light
+  font-size: ms(0)
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  margin-top: ms(2)
+  margin-bottom: ms(1)
+  max-width: $line-length
+  
+h3
+  font-size: ms(0)
+  font-weight: bold
+  margin-top: ms(1)
+  margin-bottom: 0
+  max-width: $line-length
+  
+h4
+  color: $tertiary-color
+  font-size: ms(0)
+  font-style: italic
+  line-height: 1
+  margin: 0
+  max-width: $line-length
+  
+p
+  font-size: ms(0)
+  margin: 0
+  max-width: $line-length
+
+* + p
+  margin-top: ms(-1)
+  
+img
+  max-width: 100%
+  
 a
   color: $link-color
   transition: color 150ms linear
@@ -36,51 +84,15 @@ a
   &:visited
     color: darken($link-color, 30%)
   
-p, dl, h1, h2, h3, aside
-  line-height: $line-height
-  margin-bottom: 0
-  margin-left: $gutter
-  margin-right: $gutter
+aside
+  font-size: ms(-1)
 
-p + p
-  margin-top: $line-height
-  
-h1 + p
-  margin-top: $xs
-
-h1
-  font-size: $xl
-  
-h2
-  font-size: $lg
-  letter-spacing: .5px
-  margin: 0 $gutter/2
-  
-  * + &
-    margin-top: $lg
-    
-  & + p
-    margin-top: 0
-  
-h3
-  font-size: $md
-  
-dt
-  font-size: $sm
-  line-height: 1em
-  margin: 0
-  text-transform: uppercase
-  
-  dd + &
-    margin-top: $gutter
-  
-dd
-  margin: 0
-  
-nav
-  ul
-    list-style: none
-    padding: 0
+small
+  +light
+  font-size: 1em
+  font-variant: small-caps
+  letter-spacing: 0.05em
+  text-transform: lowercase
 
 address
   font-style: normal
@@ -90,24 +102,7 @@ address
   
 ::-moz-selection
   background-color: $selection-color
-  
-.abstract
-  font-family: $italic-font
-  font-size: $lg
-  font-style: italic
-  line-height: 1.4em
-  text-align: inherit
-  
-.project-list
-  p
-    font-family: $italic-font
-    font-style: italic
 
-@media screen and (min-width: $sm-screen)
-  p, h1, h2, h3, dl, ul, aside, footer
-    margin-left: auto
-    margin-right: auto
-    max-width: $measure
-    
-  .cover .abstract
-    font-size: $xl
+.abstract
+  font-style: italic
+  margin-bottom: ms(-1)

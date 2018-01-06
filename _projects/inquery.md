@@ -1,7 +1,7 @@
 ---
 title: "InQuery: Documentation Assistant"
 order: 2012-08
-thumbnail: inquery/testing.png
+thumbnail: inquery/inquery_thumbnail.png
 client: M*Modal
 abstract: >-
   An expert assistant that supports doctors during dictation of medical records to improve regulatory compliance.

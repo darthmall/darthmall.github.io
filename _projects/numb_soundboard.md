@@ -1,7 +1,7 @@
 ---
 title: NUMB Soundboard
 order: 2014-05
-thumbnail: numb_soundboard/numb.jpg
+thumbnail: numb_soundboard/numb_thumbnail.jpg
 client: Goat in the Road Productions
 repo: https://github.com/darthmall/Dinglake
 abstract: >-

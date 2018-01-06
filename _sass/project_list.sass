@@ -11,3 +11,13 @@
       
   h3
     margin-top: 0
+    
+  li + li
+    margin-top: ms(1)
+    
+@media screen and (min-width: $sm-screen)
+  .project-list
+    +sm-grid
+      
+    li + li
+      margin-top: 0

@@ -1,0 +1,25 @@
+.home
+  font-family: $mono-font
+  background-color: $secondary-color
+  color: white
+  
+  h1
+    margin-bottom: ms(-2)
+    
+  hr
+    color: $primary-color
+    width: 1em
+    margin-top: ms(-2)
+    margin-left: 0
+
+  .hero
+    font-size: ms(1)
+
+  p + p
+    margin-top: ms(0)
+    
+  p:nth-child(1)::after
+    content: " &&"
+    
+  p:nth-child(2)::after
+    content: " &&"

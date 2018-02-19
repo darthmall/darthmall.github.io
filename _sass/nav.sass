@@ -1,4 +1,5 @@
 nav
+  font-family: $header-font
   margin-bottom: ms(2)
   max-width: $sm-screen
   
@@ -14,10 +15,11 @@ nav
     text-transform: uppercase
     letter-spacing: 0.1em
     text-decoration: none
-    +bold
+    padding: ms(-1) ms(0)
     
     &:visited
       color: inherit
 
   .active
-    text-decoration: underline
+    background-color: $secondary-color
+    color: white

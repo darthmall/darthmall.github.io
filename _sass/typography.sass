@@ -1,44 +1,39 @@
-=light
-  font-weight: 300
-  
-=bold
-  font-weight: 700
-
-=side-margins
-  padding-left: ms(1)
-  padding-right: ms(1)
-  
 html
   font-size: $font-size
   
 body
   color: $text-color
-  font-family: $sans-serif
+  font-family: $body-font
   font-weight: 400
-  line-height: $line-height
-  margin: 0
+  margin: 0 $gutter/2
   max-width: $md-screen
 
 header
-  padding-top: ms(-1)
-  +side-margins
-    
-main
-  +side-margins
-    
+  h1
+    max-width: 7em
+      
 footer
   padding-bottom: ms(1)  
-  +side-margins
   
+hr
+  border-style: solid
+  border-width: ms(-4)
+  color: inherit
+
 h1
-  font-size: ms(1)
-  font-weight: normal
-  line-height: 1.2
-  margin: ms(2) 0
-  max-width: $line-length
+  font-family: $mono-font
+  font-size: 20vw
+  font-weight: bold
+  line-height: 1
+  margin-top: ms(1)
+  margin-bottom: ms(1)
+  
+@media (min-width: 540.555px)
+  h1
+    font-size: ms(4)
 
 h2
-  +light
+  font-family: $header-font
   font-size: ms(0)
   letter-spacing: 0.1em
   text-transform: uppercase
@@ -47,6 +42,7 @@ h2
   max-width: $line-length
   
 h3
+  font-family: $mono-font
   font-size: ms(0)
   font-weight: bold
   margin-top: ms(1)
@@ -54,6 +50,7 @@ h3
   max-width: $line-length
   
 h4
+  font-family: $header-font
   color: $tertiary-color
   font-size: ms(0)
   font-style: italic
@@ -65,6 +62,7 @@ p
   font-size: ms(0)
   margin: 0
   max-width: $line-length
+  line-height: $line-height
 
 * + p
   margin-top: ms(-1)
@@ -84,25 +82,8 @@ a
   &:visited
     color: darken($link-color, 30%)
   
-aside
-  font-size: ms(-1)
-
-small
-  +light
-  font-size: 1em
-  font-variant: small-caps
-  letter-spacing: 0.05em
-  text-transform: lowercase
-
-address
-  font-style: normal
-  
 ::selection
   background-color: $selection-color
   
 ::-moz-selection
   background-color: $selection-color
-
-.abstract
-  font-style: italic
-  margin-bottom: ms(-1)

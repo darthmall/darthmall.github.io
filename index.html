@@ -7,7 +7,7 @@ classes: home
   {% assign projects = site.projects | sort: 'order' | reverse %}
   {% for project in projects %}
     <a href="{{ project.url }}">
-      {{ project.title }}
+      <p>{{ project.title }}</p>
       {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
       <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
     </a>

@@ -36,8 +36,6 @@ sass:
   style: compressed
 
 collections:
-  navigation:
-    output: false
   projects:
     output: true
     permalink: :collection/:name

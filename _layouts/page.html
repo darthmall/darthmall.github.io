@@ -25,19 +25,23 @@
     <footer>
       <address>
         <p>
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope" aria-hidden="true" title="Email address"></i>
+          <span class="sr-only">Email:</span>
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </p>
         <p class="twitter">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true" title="Twitter profile"></i>
+          <span class="sr-only">Twitter:</span>
           <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
         </p>
         <p class="github">
-          <i class="fa fa-github" aria-hidden="true"></i>
+          <i class="fa fa-github" aria-hidden="true" title="GitHub profile"></i>
+          <span class="sr-only">GitHub:</span>
           <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
         </p>
         <p>
-          <i class="fa fa-globe" aria-hidden="true"></i>
+          <i class="fa fa-globe" aria-hidden="true" title="Address"></i>
+          <span class="sr-only">Address:</span>
           {{ site.location }}
         </p>
       </address>

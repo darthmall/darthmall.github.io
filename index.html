@@ -6,10 +6,12 @@ classes: home
 <nav>
   {% assign projects = site.projects | sort: 'order' | reverse %}
   {% for project in projects %}
-    <a href="{{ project.url }}">
-      <p>{{ project.title }}</p>
-      {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
-      <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-    </a>
+    {% if project.hidden != true %}
+      <a href="{{ project.url }}">
+        <p>{{ project.title }}</p>
+        {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
+        <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
+      </a>
+    {% endif %}
   {% endfor %}
 </nav>

@@ -3,15 +3,19 @@ layout: page
 classes: home
 ---
 
+{% assign projects = site.projects | sort: 'order' | reverse %}
+
 <nav>
-  {% assign projects = site.projects | sort: 'order' | reverse %}
   {% for project in projects %}
     {% if project.hidden != true %}
-      <a href="{{ project.url }}">
-        <p>{{ project.title }}</p>
+      <article>
+        <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+        
         {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
-        <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-      </a>
+        <a href="{{ project.url }}">
+          <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
+        </a>
+      </article>
     {% endif %}
   {% endfor %}
 </nav>

@@ -2,14 +2,33 @@ body
   color: $text-color
   font-family: $body-font
   line-height: $line-height
-  
+  margin: 0
+
 header
   font-family: $title-font
+  margin: 0 $margin
+
+footer
+  margin: 0 $margin
+
+article
+  display: grid
+  grid-template-columns: $margin 1fr $margin
+
+  & > *
+    grid-column: 2 / 3
+
+  a
+    grid-column: 1 / 4
 
 h1
   font-family: $title-font
   text-transform: uppercase
   letter-spacing: 2px
+
+  a
+    color: $text-color
+    text-decoration: none
   
 h2, h3, h4, h5, h6
   font-family: $header-font
@@ -21,3 +40,5 @@ p
 
 img
   max-width: 100%
+
+

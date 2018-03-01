@@ -1,18 +1,18 @@
 ---
 layout: page
 ---
-<main>
+<article>
   <dl>
     <dt>{{ page.title }}</dt>
     <dd>{{ page.abstract }}</dd>
     {% if page.client %}
-    <dt>Client</dt>
-    <dd>{{ page.client }}</dd>
+      <dt>Client</dt>
+      <dd>{{ page.client }}</dd>
     {% endif %}
     {% if page.repo %}
-    <dt>Repository</dt>
-    <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
+      <dt>Repository</dt>
+      <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
     {% endif %}
   </dl>
   {{ content }}
-</main>
+</article>

@@ -11,14 +11,6 @@
   </head>
   
   <body class="{{ page.classes }}">
-    <header>
-      {% if page.title %}
-        <p><a href="/">{{ site.title }}</a></p>
-        <h1>{{ page.title }}</h1>
-      {% else %}
-        <h1><a href="/">{{ site.title }}</a></h1>
-      {% endif %}
-    </header>
     
     {{ content }}
     

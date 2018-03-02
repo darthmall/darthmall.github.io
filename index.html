@@ -18,6 +18,8 @@ classes: home
       <article>
         <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
         
+        <hr />
+
         {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
         <a href="{{ project.url }}">
           <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">

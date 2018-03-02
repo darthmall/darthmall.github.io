@@ -1,7 +1,7 @@
 ---
 title: Energy Capture Map
 order: 2012-11
-thumbnail: energy_capture_map/energy_capture_map.png
+thumbnail: energy_capture_map/energy_map_thumb@2x.png
 client: John Sheehan
 repo: https://github.com/darthmall/Energy-Capture-Map
 abstract: >-

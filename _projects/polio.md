@@ -1,7 +1,7 @@
 ---
 title: Polio Dashboard
 order: 2015-05
-thumbnail: polio/dashboard_thumbnail.png
+thumbnail: polio/polio_thumb@2x.png
 client: UNICEF
 repo: https://github.com/unicef/polio
 abstract: >-

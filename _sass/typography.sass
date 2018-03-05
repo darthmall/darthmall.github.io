@@ -2,11 +2,13 @@ body
   color: $text-color
   font-family: $body-font
   line-height: $line-height
-  margin: 0
-
-header
   margin: 0 $margin
 
+  & > *
+    max-width: $line-length
+    margin: auto
+
+header
   a
     color: $text-color
     font-family: $title-font
@@ -20,29 +22,13 @@ header
 
 footer
   font-size: ms(-1)
-  margin: 0 $margin
 
 article
-  display: grid
-  grid-template-columns: $margin 1fr $margin
   margin-bottom: ms(3)
-
-
-  & > *
-    grid-column: 2 / 3
-
-  a
-    grid-column: 1 / 4
-
-  hr
-    grid-row: 2 / 3
-    margin: ms(-2) 0 0
-    width: ms(3)
 
   h1
     font-family: $body-font
     font-size: ms(1)
-    grid-row: 3 / 4
     letter-spacing: 0
     text-transform: none
     margin: 0 0 ms(-2)

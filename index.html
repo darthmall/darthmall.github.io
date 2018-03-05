@@ -12,7 +12,7 @@ classes: home
 
 {% assign projects = site.projects | sort: 'order' | reverse %}
 
-<nav>
+<nav class="project-list">
   {% for project in projects %}
     {% if project.hidden != true %}
       <article>

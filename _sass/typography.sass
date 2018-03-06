@@ -4,17 +4,24 @@ body
   line-height: $line-height
   margin: 0
 
-h1, h2, h3, h4, h5, h6, p
+.section--content
   max-width: $line-length
   margin-left: $margin
   margin-right: $margin
+
+.section--fullwidth
+  max-width: 100%
+  margin-left: 0
+  margin-right: 0
+
+.link--title
+    text-decoration: none
 
 header
   a
     color: $text-color
     font-family: $title-font
     letter-spacing: 1px
-    text-decoration: none
     text-transform: uppercase
 
   p
@@ -28,14 +35,6 @@ footer
 article
   margin-bottom: ms(3)
 
-  h1
-    font-family: $body-font
-    font-size: ms(1)
-    letter-spacing: 0
-    text-transform: none
-    margin-top: 0
-    margin-bottom: ms(-2)
-
 h1
   font-family: $title-font
   font-size: ms(2)
@@ -46,7 +45,7 @@ h1
     color: $text-color
     text-decoration: none
   
-h2, h3, h4, h5, h6
+h2, h3
   font-family: $header-font
   letter-spacing: 1px
   text-transform: uppercase
@@ -59,11 +58,21 @@ h3
   margin-top: ms(1)
   margin-bottom: ms(-3)
 
+h4
+  color: $text-color
+  font-family: $body-font
+  font-size: ms(1)
+  font-weight: bold
+  letter-spacing: 0
+  text-decoration: none
+  margin-top: 0
+  margin-bottom: ms(-2)
+
 address
   margin-bottom: ms(-1)
 
   p
-    margin: ms(-3)
+    margin: ms(-3) 0
 
 p
   * + &

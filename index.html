@@ -3,8 +3,8 @@ layout: page
 classes: home
 ---
 
-<header>
-  <h1><a href="/">{{ site.title }}</a></h1>
+<header class="section--content">
+  <h1><a href="/" class="link--title">{{ site.title }}</a></h1>
   <p>
     I am a designer &amp; programmer specializing in data visualization.
   </p>
@@ -12,14 +12,14 @@ classes: home
 
 {% assign projects = site.projects | sort: 'order' | reverse %}
 
-<nav class="project-list">
+<nav class="project-list section--fullwidth">
   {% for project in projects %}
     {% if project.hidden != true %}
       <article>
-        <a href="{{ project.url }}">
+        <a href="{{ project.url }}" class="link--title">
           {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
           <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-          <h1>{{ project.title }}</h1>
+          <h4 class="section--content">{{ project.title }}</h4>
         </a>
       </article>
     {% endif %}

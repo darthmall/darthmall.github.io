@@ -3,7 +3,7 @@ layout: page
 classes: home
 ---
 
-<header>
+<header class="left">
   <h1><a href="/" class="homeLink">{{ site.title }}</a></h1>
   <p class="blurb">
     I am a designer &amp; programmer specializing in data visualization.
@@ -12,7 +12,7 @@ classes: home
 
 {% assign projects = site.projects | sort: 'order' | reverse %}
 
-<nav class="gallery">
+<nav class="gallery main">
   {% for project in projects %}
     {% if project.hidden != true %}
       <article class="project galleryItem">

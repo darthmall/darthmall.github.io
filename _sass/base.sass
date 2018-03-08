@@ -1,6 +1,83 @@
+/**
+ * base.sass defines the styles for all HTML elements, and any other selectors
+ * that share those definitions.
+ */
+
 html
   box-sizing: border-box
   font-size: $font-size
   
 *, *::after, *::before
   box-sizing: inherit
+
+body,
+.homeLink,
+.galleryItem a
+  color: $text-color
+
+body,
+h4
+  font-family: $body-font
+
+body
+  line-height: $line-height
+  margin: 0 auto
+  max-width: ($line-length + 2 * $margin)
+  padding: 0 $margin
+
+article
+  margin-bottom: ms(3)
+
+footer,
+.disclaimer
+  font-size: ms(-1)
+
+address
+  margin-bottom: ms(-1)
+
+  p
+    // I know !important is supposed to be gross, but this seems easier than
+    // redefining margin-top for address p + p. Fewer characters.
+    margin: ms(-3) 0 !important
+
+h1,
+h2,
+h3,
+h4,
+.homeLink
+  letter-spacing: 1px
+  text-transform: uppercase
+
+h1,
+.homeLink
+  font-family: $title-font
+
+h2,
+h3
+  font-family: $header-font
+
+h2,
+h4
+  font-size: ms(1)
+
+h4,
+h3 + p
+  margin-top: 0
+
+h1
+  font-size: ms(2)
+
+h3
+  font-size: ms(0)
+  margin-top: ms(1)
+  margin-bottom: ms(-3)
+
+h4
+  font-weight: bold
+  margin-bottom: ms(-2)
+
+p + p
+  margin-top: ms(2)
+
+img
+  max-width: 100%

@@ -1,7 +1,4 @@
 @supports (display: grid)
-  body
-    max-width: 100%
-
   .gallery,
   .grid
     display: grid
@@ -13,28 +10,25 @@
     & > *
       margin: 0
 
-  .grid
-    grid-template-columns: 1fr minmax(auto, $line-length) 1fr
-    overflow: scroll
-
-    & > *
-      grid-column-start: 2
-
   @media (min-width: $md-size)
+    body
+      max-width: 100%
+
     .grid
       grid-gap: ms(3)
       grid-template-columns: 280px minmax(auto, $line-length) 1fr
-
-    .home
-      grid-template-rows: [top] min-content 1fr [bottom]
+      grid-template-rows: [top] min-content min-content [footer] 1fr [bottom]
       padding-top: $margin
 
-    .left
-      grid-column-start: 1
+      .left
+        grid-column-start: 1
 
-    header,
-    .main
-      grid-row-start: top
+      .gridHeader,
+      .main
+        grid-row-start: top
 
-    .main
-      grid-row-end: bottom
+      .gridFooter
+        grid-row-start: footer
+
+      .main
+        grid-row-end: bottom

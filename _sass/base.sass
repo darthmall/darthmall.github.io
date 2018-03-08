@@ -29,6 +29,7 @@ article
   margin-bottom: ms(3)
 
 footer,
+dt,
 .disclaimer
   font-size: ms(-1)
 
@@ -44,6 +45,7 @@ h1,
 h2,
 h3,
 h4,
+dt,
 .homeLink
   letter-spacing: 1px
   text-transform: uppercase
@@ -53,7 +55,8 @@ h1,
   font-family: $title-font
 
 h2,
-h3
+h3,
+dt
   font-family: $header-font
 
 h2,
@@ -63,6 +66,10 @@ h4
 h4,
 h3 + p
   margin-top: 0
+
+h4,
+dd
+  margin-bottom: ms(-2)
 
 h1
   font-size: ms(2)
@@ -74,10 +81,12 @@ h3
 
 h4
   font-weight: bold
-  margin-bottom: ms(-2)
 
 p + p
   margin-top: ms(2)
+
+dd
+  margin-left: 0
 
 img
   max-width: 100%

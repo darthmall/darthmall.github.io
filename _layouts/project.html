@@ -7,6 +7,26 @@ layout: page
   <p class="blurb">{{ page.abstract }}</p>
 </header>
 
+{% capture collection_name %}{{ page.collection }}{% endcapture %}
+{% if collection_name %}
+  {% assign collection_items = site[collection_name] %}
+
+  {% for item in collection_items %}
+
+    {% if item.title == page.title %}
+      {% unless forloop.first %}
+        {% assign prev = prev_item %}
+      {% endunless %}
+
+      {% unless forloop.last %}
+        {% assign next = collection_items[forloop.index] %}
+      {% endunless %}
+    {% endif %}
+
+    {% assign prev_item = item %}
+  {% endfor %}
+{% endif %}
+
 <aside class="left">
   <dl>
     {% if page.client %}
@@ -16,6 +36,21 @@ layout: page
     {% if page.repo %}
       <dt>Repository</dt>
       <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
+    {% endif %}
+  </dl>
+
+  <dl>
+    {% if prev %}
+      <dt>Previous</dt>
+      <dd>
+        <a href="{{ prev.url }}">{{ prev.title }}</a>
+      </dd>
+    {% endif %}
+    {% if next %}
+      <dt>Next</dt>
+      <dd>
+        <a href="{{ next.url }}">{{ next.title }}</a>
+      </dd>
     {% endif %}
   </dl>
 </aside>

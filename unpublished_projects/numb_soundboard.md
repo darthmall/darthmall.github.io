@@ -6,7 +6,6 @@ client: Goat in the Road Productions
 repo: https://github.com/darthmall/Dinglake
 abstract: >-
   An application for triggering sound effects with a MakeyMakey during performances of Goat in the Road's play, NUMB.
-hidden: true
 ---
 
 ![A promo photo of the cast of NUMB around the table built specifically for triggering sound effects during performances]({% link assets/img/numb_soundboard/numb.jpg %})

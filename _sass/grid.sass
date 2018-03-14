@@ -15,13 +15,12 @@
       max-width: 100%
 
     .grid
-      grid-gap: ms(3)
-      grid-template-columns: 280px minmax(auto, $line-length) 1fr
+      grid-template-columns: [left] 280px ms(3) [content] minmax(auto, $line-length) ms(3) [right] 1fr
       grid-template-rows: [top] min-content min-content [footer] 1fr [bottom]
       padding-top: $margin
 
       .left
-        grid-column-start: 1
+        grid-column-start: left
 
       .gridHeader,
       .main
@@ -31,4 +30,5 @@
         grid-row-start: footer
 
       .main
+        grid-column-start: content
         grid-row-end: bottom

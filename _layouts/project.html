@@ -9,7 +9,7 @@ layout: page
 
 {% capture collection_name %}{{ page.collection }}{% endcapture %}
 {% if collection_name %}
-  {% assign collection_items = site[collection_name] %}
+  {% assign collection_items = site[collection_name] | sort: 'order' | reverse %}
 
   {% for item in collection_items %}
 
@@ -40,16 +40,16 @@ layout: page
   </dl>
 
   <dl>
-    {% if prev %}
-      <dt>Previous</dt>
-      <dd>
-        <a href="{{ prev.url }}">{{ prev.title }}</a>
-      </dd>
-    {% endif %}
     {% if next %}
       <dt>Next</dt>
       <dd>
         <a href="{{ next.url }}">{{ next.title }}</a>
+      </dd>
+    {% endif %}
+    {% if prev %}
+      <dt>Previous</dt>
+      <dd>
+        <a href="{{ prev.url }}">{{ prev.title }}</a>
       </dd>
     {% endif %}
   </dl>

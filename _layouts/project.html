@@ -1,17 +1,60 @@
-{% include header.html %}
-<main>
+---
+layout: page
+---
+<header class="left gridHeader">
+  <a href="/" class="homeLink">{{ site.title }}</a>
+  <h1>{{ page.title }}</h1>
+  <p class="blurb">{{ page.abstract }}</p>
+</header>
+
+{% capture collection_name %}{{ page.collection }}{% endcapture %}
+{% if collection_name %}
+  {% assign collection_items = site[collection_name] | sort: 'order' | reverse %}
+
+  {% for item in collection_items %}
+
+    {% if item.title == page.title %}
+      {% unless forloop.first %}
+        {% assign prev = prev_item %}
+      {% endunless %}
+
+      {% unless forloop.last %}
+        {% assign next = collection_items[forloop.index] %}
+      {% endunless %}
+    {% endif %}
+
+    {% assign prev_item = item %}
+  {% endfor %}
+{% endif %}
+
+<aside class="left">
   <dl>
-    <dt>{{ page.title }}</dt>
-    <dd>{{ page.abstract }}</dd>
     {% if page.client %}
-    <dt>Client</dt>
-    <dd>{{ page.client }}</dd>
+      <dt>Client</dt>
+      <dd>{{ page.client }}</dd>
     {% endif %}
     {% if page.repo %}
-    <dt>Repository</dt>
-    <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
+      <dt>Repository</dt>
+      <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
     {% endif %}
   </dl>
+
+  <dl>
+    {% if next %}
+      <dt>Next</dt>
+      <dd>
+        <a href="{{ next.url }}">{{ next.title }}</a>
+      </dd>
+    {% endif %}
+    {% if prev %}
+      <dt>Previous</dt>
+      <dd>
+        <a href="{{ prev.url }}">{{ prev.title }}</a>
+      </dd>
+    {% endif %}
+  </dl>
+</aside>
+
+<article class="main">
   {{ content }}
-</main>
-{% include footer.html %}
+</article>

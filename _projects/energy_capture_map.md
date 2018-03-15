@@ -1,14 +1,19 @@
 ---
 title: Energy Capture Map
 order: 2012-11
-thumbnail: energy_capture_map/energy_capture_map.png
+thumbnail: energy_capture_map/energy_map_thumb@2x.png
 client: John Sheehan
 repo: https://github.com/darthmall/Energy-Capture-Map
 abstract: >-
   An interactive map that illustrates how different crops evolved to grow more efficiently at different latitudes.
+color: 779C8D
 ---
 
-![A map showing crop efficiency by latitude]({% link assets/img/energy_capture_map/energy_capture_map.png %})
+<figure>
+  <img alt=""
+      src="{% link assets/img/energy_capture_map/energy_capture_map.png %}" />
+  <figcaption>A map showing crop efficiency by latitude</figcaption>
+</figure>
 
 ## Comparing Crop Efficiency
 
@@ -18,7 +23,11 @@ abstract: >-
 
 To explore and illustrate the relationship between latitude and the energy capture of these two crops I built a simple visualization that juxtaposes a map with a scatterplot showing energy capture vs. latitude.
 
-![A screenshot of the application juxtaposing a map with a scatter plot]({% link assets/img/energy_capture_map/screenshot.png %})
+<figure>
+  <img alt=""
+      src="{% link assets/img/energy_capture_map/screenshot.png %}" />
+  <figcaption>A screenshot of the application juxtaposing a map with a scatter plot</figcaption>
+</figure>
 
 The map uses colored bands to indicate the amount of energy capture for each crop at different latitudes. Each crop is differentiated by hue (corn: yellow-green, sugar cane: pink-magenta). Higher energy captures are presented as darker colors.
 

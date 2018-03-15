@@ -1,16 +1,27 @@
 ---
+layout: page
 classes: home
-title: Work
 ---
-{% include header.html %}
-<main>
-  <h1>
-    <b>Evan Sheehan</b> is a designer & programmer who specializes in creating data visualizations for the web.
-  </h1>
 
-  <section>
-    <h2>Selected Projects</h2>
-    {% include project_list.html %}
-  </section>
-</main>
-{% include footer.html %}
+<header class="left">
+  <h1><a href="/" class="homeLink">{{ site.title }}</a></h1>
+  <p class="blurb">
+    I am a designer &amp; programmer specializing in data visualization.
+  </p>
+</header>
+
+{% assign projects = site.projects | sort: 'order' | reverse %}
+
+<nav class="gallery main">
+  {% for project in projects %}
+    {% assign delay = forloop.index | times: 60 | plus: 500 %}
+    <article class="project galleryItem fadeIn"
+             style="animation-delay:{{ delay }}ms">
+      <a href="{{ project.url }}">
+        {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
+        <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
+        <h4>{{ project.title }}</h4>
+      </a>
+    </article>
+  {% endfor %}
+</nav>

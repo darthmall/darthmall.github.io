@@ -1,14 +1,18 @@
 ---
 title: "Jigs: Visualized"
 order: 2012-08
-thumbnail: jigs/network_thumbnail.png
+thumbnail: jigs/jigs_thumb@2x.png
 client: Personal
 repo: https://github.com/darthmall/Irish-Tune-Visualization
 abstract: >-
   A network visualization of relationships between traditional Irish jigs based on melodic similarity.
+color: DF4A3F
 ---
 
-![A network of jigs connected by similarity]({% link assets/img/jigs/network.png %})
+<figure>
+  <img src="{% link assets/img/jigs/network.png %}" alt="">
+  <figcaption>A network of jigs connected by similarity.</figcaption>
+</figure>
 
 ## Noise in the Key of D
 
@@ -29,21 +33,6 @@ I used [Gephi][gephi] to create a GraphML file for the network layout which I th
 To determine how similar a pair of jigs is, I calculate the [Levenshtein distance][levenshtein] between each pair of jigs using the [ABC notation][abc] for each jig. I normalize the distance by dividing it by the length of the longer of the two tunes. I then set a threshold to exclude edges in the graph that represent a low similarity.
 
 These calculations were all performed with the help of a [Python][python] library for musicology: [music21][music21].
-
-## Visualizing Melody
-
-Originally I had wanted to show not only that the tunes in this corpus were very similar, but *how* they were similar; I wanted to highlight repeated phrases. To that end, some of my early iterations of these visualizations involved trying to represent the melodies of individual tunes to highlight where common phrases occur. Part of what I hoped to achieve here was to do for multiple tunes what Martin Wattenberg's [Shape of Song][shapeofsong] did for individual songs.
-
-<figure>
-  <img src="{% link assets/img/jigs/gan_ainm-pianoroll.png %}" />
-  <img src="{% link assets/img/jigs/babes_in_the_woods-barcode.png %}" />
-  <img src="{% link assets/img/jigs/the_corkin_cross-line.png %}" />
-  <figcaption>
-    Various representations of overlapping melodies.
-  </figcaption>
-</figure>
-
-After exploring several visual forms with this goal in mind, I decided that it would be more effective to show the entire corpus at once, rather than trying to focus on individual tunes, thus, the network.
 
 [thesession]: https://thesession.org
 [abc]: http://abcnotation.com

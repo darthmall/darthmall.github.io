@@ -14,7 +14,7 @@ classes: home
 
 <nav class="gallery main">
   {% for project in projects %}
-    {% assign delay = forloop.index | times: 60 | plus: 1000 %}
+    {% assign delay = forloop.index | times: 60 | plus: 500 %}
     <article class="project galleryItem fadeIn"
              style="animation-delay:{{ delay }}ms">
       <a href="{{ project.url }}">

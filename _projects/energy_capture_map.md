@@ -6,6 +6,7 @@ client: John Sheehan
 repo: https://github.com/darthmall/Energy-Capture-Map
 abstract: >-
   An interactive map that illustrates how different crops evolved to grow more efficiently at different latitudes.
+color: 779C8D
 ---
 
 ![A map showing crop efficiency by latitude]({% link assets/img/energy_capture_map/energy_capture_map.png %})

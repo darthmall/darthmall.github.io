@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
     <title>{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}</title>
     <script src="https://use.fontawesome.com/16ccd9e889.js"></script>
+    {% if page.color %}
+      <style>
+        :root {
+          --primary-color: #{{ page.color }};
+        };
+      </style>
+    {% endif %}
   </head>
   
   <body class="{{ page.classes }} grid">
-    
     {{ content }}
     
     <footer class="left gridFooter">

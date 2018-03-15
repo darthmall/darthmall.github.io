@@ -6,6 +6,7 @@ client: Personal
 repo: https://github.com/darthmall/Irish-Tune-Visualization
 abstract: >-
   A network visualization of relationships between traditional Irish jigs based on melodic similarity.
+color: DF4A3F
 ---
 
 ![A network of jigs connected by similarity]({% link assets/img/jigs/network.png %})

@@ -6,6 +6,7 @@ client: UNICEF
 repo: https://github.com/unicef/polio
 abstract: >-
   An interactive, printable dashboard that visualizes key indicators for UNICEF's Global Polio Eradication Initiative.
+color: 00AEEF
 ---
 
 ![A mockup of the dashboard I designed for UNICEF's Polio Eradication initiative]({{ "assets/img/polio/dashboard.png" | relative_url }})

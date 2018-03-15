@@ -5,6 +5,7 @@ thumbnail: user_journey/user_journey_thumb@2x.png
 client: Spotify
 abstract: >-
   A tool for exploring the paths users take through Spotify's clients to find something to stream.
+color: F573A0
 ---
 
 ![A mockup of the visualization of user journeys]({{ "assets/img/user_journey/journeys.png" | relative_url }})

@@ -9,9 +9,10 @@ abstract: >-
 color: 00AEEF
 ---
 
-![A mockup of the dashboard I designed for UNICEF's Polio Eradication initiative]({{ "assets/img/polio/dashboard.png" | relative_url }})
-
-<aside class="disclaimer">All data shown in these mockups is fake.</aside>
+<figure>
+  <img src="{% link assets/img/polio/dashboard.png %}" alt="">
+  <figcaption>A mockup of the dashboard I designed for UNICEF's Polio Eradication initiative. All data shown in these mockups is fake.</figcaption>
+</figure>
 
 ## GPEI
 
@@ -22,8 +23,6 @@ three remaining countries in which it is endemic.
 At Seed Scientific I worked with UNICEF to design and develop a tool for
 tracking the key indicators they use to monitor their efforts in Nigeria, one of
 the three endemic countries (along with Pakistan and Afghanistan).
-
-## Background
 
 The GPEI runs regular campaigns to vaccinate children in endemic countries. They
 track over 30 indicators to monitor these campaigns. These indicators are
@@ -41,7 +40,10 @@ entry and upload features.
 
 ## User Research
 
-![Social Mobilizers in Sokoto, Nigeria]({{ "assets/img/polio/research.jpg" | relative_url }})
+<figure>
+  <img src="{% link assets/img/polio/research.jpg %}" alt="">
+  <figcaption>Social Mobilizers in Sokoto, Nigeria.</figcaption>
+</figure>
 
 We spent a week in Nigeria with the UNICEF team there learning about their
 operation both in their office in Abuja as well as in the field. We traveled
@@ -49,7 +51,10 @@ north to Sokoto to meet with Social Mobilizers in several towns. The Social
 Mobilizers are locals that work for UNICEF to educate people about polio
 vaccinations and other important health issues.
 
-![The Seed and UNICEF Nigeria team]({{ "assets/img/polio/team.jpg" | relative_url }})
+<figure>
+  <img src="{% link assets/img/polio/team.jpg %}" alt="">
+  <figcaption>The Seed and UNICEF Nigeria team.</figcaption>
+</figure>
 
 [unicef]: https://www.unicef.org
 [gpei]: http://polioeradication.org

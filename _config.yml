@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Evan Sheehan
-email: evan.sheehan@protonmail.com
+email: esheehan@fastmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Evan Sheehan is a designer & programmer who specializes in creating data visualizations for the web.
 baseurl: "" # the subpath of your site, e.g. /blog

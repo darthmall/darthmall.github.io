@@ -1,70 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Work+Sans:300,600" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
-    <title>{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}</title>
-    <script src="https://use.fontawesome.com/16ccd9e889.js"></script>
-    {% if page.color %}
-      <style>
-        :root {
-          --primary-color: #{{ page.color }};
-        };
-      </style>
-    {% endif %}
-  </head>
+---
+layout: base
+---
+{{ content }}
+
+<footer class="left gridFooter">
+  <address>
+    <dl>
+      <dt>
+        <i class="fas fa-envelope" aria-hidden title="Email address"></i>
+        Email
+      </dt>
+      <dd>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </dd>
+
+      <dt class="twitter">
+        <i class="fab fa-twitter" aria-hidden title="Twitter profile"></i>
+        Twitter
+      </dt>
+      <dd>
+        <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
+      </dd>
+      <dt class="github">
+        <i class="fab fa-github" aria-hidden title="GitHub profile"></i>
+        GitHub
+      </dt>
+      <dd>
+        <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
+      </dd>
+      <dt>
+        <i class="fas fa-globe" aria-hidden title="Address"></i>
+        City
+      </dt>
+      <dd>{{ site.location }}</dd>
+    </dl>
+  </address>
   
-  <body class="{{ page.classes }} grid">
-    {{ content }}
-    
-    <footer class="left gridFooter">
-      <address>
-        <dl>
-          <dt>
-            <i class="fas fa-envelope" aria-hidden title="Email address"></i>
-            Email
-          </dt>
-          <dd>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </dd>
-
-          <dt class="twitter">
-            <i class="fab fa-twitter" aria-hidden title="Twitter profile"></i>
-            Twitter
-          </dt>
-          <dd>
-            <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
-          </dd>
-          <dt class="github">
-            <i class="fab fa-github" aria-hidden title="GitHub profile"></i>
-            GitHub
-          </dt>
-          <dd>
-            <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
-          </dd>
-          <dt>
-            <i class="fas fa-globe" aria-hidden title="Address"></i>
-            City
-          </dt>
-          <dd>{{ site.location }}</dd>
-        </dl>
-      </address>
-      
-      <dl>
-        <dt>About</dt>
-        <dd>
-          <a href="/resume">Resume</a>
-        </dd>
-      </dl>
-      
-      <p class="copyright">
-        &copy; 2017&ndash;2018 Evan Sheehan
-      </p> 
-    </footer>
-
-  </body>
-</html>
+  <dl>
+    <dt>About</dt>
+    <dd>
+      <a href="/resume">Resume</a>
+    </dd>
+  </dl>
+  
+  <p class="copyright">
+    &copy; 2017&ndash;2018 Evan Sheehan
+  </p> 
+</footer>

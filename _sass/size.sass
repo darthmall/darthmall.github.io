@@ -6,24 +6,23 @@ html
 
 p,
 h1,
-h2,
-h3
+h2
   margin: 0
 
 h2
-  margin: $xl-space 0 $sm-space 0
+  margin: $lg-space 0 $md-space 0
+  padding: 0 0 0 $sm-space
+  border-left: $sm-space solid black
+
+h3
+  margin: $lg-space 0 $md-space 0
+
+  h2 + &
+    margin-top: 0
 
 ul,
 dl
   margin: $sm-space 0
 
-dd
-  margin: 0 0 $lg-space 0
-
 p + p
   margin-top: 1.111em
-
-.title,
-.employment-dates
-  display: inline-block
-  margin-bottom: $sm-space

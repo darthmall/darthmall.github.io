@@ -23,22 +23,23 @@ permalink: /resume
     <h2>Experience</h2>
     {% assign jobs = site.career | sort: "from" | reverse %}
 
-    <dl>
-      {% for job in jobs %}
-        {% if job.exclude %}{% continue %}{% endif %}
-        <dt>
-          {{ job.title }} at {{ job.company }}
-        </dt>
-        <dd>
-          <span class="employment-dates">
-            {{ job.from | split: "-" | first }}
-            to
-            {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
-          </span>
-          {{ job.content }}
-        </dd>
-      {% endfor %}
-    </dl>
+    {% for job in jobs %}
+      {% if job.exclude %}{% continue %}{% endif %}
+      <h3>
+        <span class="job-title">
+          {{ job.title }}&emsp;
+        </span><span class="company">
+          {{ job.company }}
+        </span><small>
+          &mdash;
+        </small><span class="employment-dates">
+          {{ job.from | split: "-" | first }}
+          to
+          {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}
+        </span>
+      </h3>
+      {{ job.content }}
+    {% endfor %}
   </section>
   
   <section id="skills">

@@ -1,15 +1,19 @@
 {% assign projects = site.projects | sort: 'order' | reverse %}
-
+{% assign delay = 500 %}
 <nav class="gallery main">
   {% for project in projects %}
-    {% assign delay = forloop.index | times: 60 | plus: 500 %}
-    <article class="project galleryItem fadeIn"
-             style="animation-delay:{{ delay }}ms">
-      <a href="{{ project.url }}">
-        {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
-        <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-        <h4>{{ project.title }}</h4>
-      </a>
-    </article>
+
+    {% if page.url != project.url %}
+      <article class="project galleryItem fadeIn"
+               style="animation-delay:{{ delay }}ms">
+        <a href="{{ project.url }}">
+          {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
+          <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
+          <h4>{{ project.title }}</h4>
+        </a>
+      </article>
+      {% assign delay = delay | plus: 60 %}
+    {% endif %}
+
   {% endfor %}
 </nav>

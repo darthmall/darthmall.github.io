@@ -11,7 +11,7 @@ permalink: /resume
     <ul class="plain">
       {% for ed in site.data.education %}
         <li>
-          <span class="degree">{{ ed.degree }}</span>
+          <span class="degree">{{ ed.degree }}</span> of
           <span class="field">{{ ed.field }}</span>
           <span class="school">{{ ed.school }}</span>
         </li>
@@ -26,13 +26,10 @@ permalink: /resume
     {% for job in jobs %}
       {% if job.exclude %}{% continue %}{% endif %}
       <h3>
-        <span class="job-title">
-          {{ job.title }}&emsp;
-        </span><span class="company">
+        <span class="job-title">{{ job.title }}</span>
+        <span class="metadata">
           {{ job.company }}
-        </span><small>
           &mdash;
-        </small><span class="employment-dates">
           {{ job.from | split: "-" | first }}
           to
           {% if job.to %}{{ job.to | split: "-" | first }}{% else %}Present{% endif %}

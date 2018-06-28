@@ -5,6 +5,8 @@ classes: about
 permalink: /about
 ---
 
+## About Me
+
 <img class="float" src="{% link assets/img/me.jpg %}"
   alt="Me at an offsite with Spotify's Data Mission" />
 
@@ -26,3 +28,7 @@ user interface development and data visualization.
 In 2012 I received my Masters of Human-Computer Interaction from the
 [Human-Computer Interaction Institute](http://www.hcii.cmu.edu/masters-program-pittsburgh)
 at Carnegie Mellon University.
+
+[See my resume.](/about/resume)
+
+## About the Site

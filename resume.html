@@ -41,23 +41,11 @@ permalink: /resume
   
   <section id="skills">
     <h2>Skills</h2>
-    <h3>Programming</h3>
-    
-    <ul>
-      {% for lang in site.data.programming %}
-        <li class="programming-language">
-          {{ lang.name }}
-          {% if lang.tools %}
-            <ul>{% for tool in lang.tools %}<li>{{ tool }}</li>{% endfor %}</ul>{% endif %}</li>
-      {% endfor %}
-    </ul>
     
     {% for set in site.data.skills %}
       <h3>{{ set.category }}</h3>
-      <ul class="{{ set.category | downcase }}">
-        {% for skill in set.skills %}
-          <li>{{ skill }}</li>
-        {% endfor %}
+      <ul class="skills {{ set.category | downcase }}">
+        {% for skill in set.skills %}<li>{{ skill }}</li>{% endfor %}
       </ul>
     {% endfor %}
   </section>

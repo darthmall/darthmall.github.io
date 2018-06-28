@@ -1,4 +1,23 @@
 -
+  category: Programming Languages
+  skills:
+    - JavaScript
+    - Python
+    - SQL
+    - Java
+    - C
+    - C++
+-
+  category: Web Development
+  skills:
+    - HTML5
+    - CSS
+    - D3
+    - React
+    - Svelte
+    - Django
+    - Flask
+-
   category: Design
   skills:
     - User research
@@ -9,6 +28,7 @@
   category: Graphics
   skills:
     - Sketch
+    - Figma
     - Adobe Illustrator
     - InDesign
     - OmniGraffle

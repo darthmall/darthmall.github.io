@@ -12,7 +12,13 @@ h2
   margin: $lg-space 0 $sm-space 0
 
 h3
-  margin: $md-space 0 $sm-space 0
+  margin: $md-space 0 0 0
+
+  & + p
+    margin-top: $sm-space
+
+  & + ul
+    margin-top: 0
 
 h2 + h3
   margin-top: 0
@@ -23,3 +29,10 @@ dl
 
 p + p
   margin-top: 1.111em
+
+.skills
+  li + li
+    margin: 0
+
+  li + li::before
+    margin: 0 $sm-space

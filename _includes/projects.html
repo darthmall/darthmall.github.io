@@ -9,7 +9,8 @@
         <a href="{{ project.url }}">
           {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
           <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-          <h4>{{ project.title }}</h4>
+          <span class="projectTitle">{{ project.title }}</span>
+          <span class="metadata">{{ project.client }}</span>
         </a>
       </article>
       {% assign delay = delay | plus: 60 %}

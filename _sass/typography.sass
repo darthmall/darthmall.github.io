@@ -9,13 +9,18 @@ h1
   letter-spacing: -1px
   line-height: 1.1056
 
-h2
+h2,
+.btn,
+.siteNav a,
+.siteTitle
   font-family: $header-font
-  font-size: 1.247em
+  font-size: 1em
   font-weight: 500
-  letter-spacing: 0.03em
-  line-height: 1.247
+  letter-spacing: 1px
   text-transform: uppercase
+
+h2
+  line-height: 1.247
 
 h3,
 .projectTitle
@@ -55,12 +60,8 @@ dt,
 .skills li + li::before
   content: "•"
 
-.site-title
-  font-family: $mono-font
-  font-size: 1.247em
-  font-style: normal
-  font-weight: 700
-  line-height: 1.0692
+.siteNav
+  float: right
 
 .gallery
   text-align: justify
@@ -71,18 +72,19 @@ dt,
   text-align-last: initial
 
 .btn
-  font-family: $header-font
-  font-style: normal
-  letter-spacing: 0.03em
   text-align: center
-  text-decoration: none
-  text-transform: uppercase
 
   &,
   &:visited
     color: $text-color
 
-.galleryItem
-  a
-    font-style: normal
-    text-decoration: none
+.btn,
+.btn:visited,
+.galleryItem a,
+.galleryItem a:visited,
+.siteNav a,
+.siteNav a:visited,
+.siteTitle
+  color: $text-color
+  font-style: normal
+  text-decoration: none

@@ -1,6 +1,6 @@
 {% assign projects = site.projects | sort: 'order' | reverse %}
 {% assign delay = 500 %}
-<nav class="gallery main">
+<nav class="gallery">
   {% for project in projects %}
 
     {% if page.url != project.url %}

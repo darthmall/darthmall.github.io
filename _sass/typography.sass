@@ -4,10 +4,10 @@ html
   line-height: $line-height
 
 h1
-  font-family: $title-font
-  font-size: 3.015em
+  font-size: 4.209em
+  font-weight: 900
   letter-spacing: -1px
-  line-height: 1.1056
+  line-height: 76px / (4.209 * $font-size)
 
 h2,
 .btn,
@@ -33,6 +33,11 @@ p,
 ul
   // Selected experimentally using 18px/28px Chivo
   max-width: 58ch
+
+.blurb
+  font-size: 1.777em
+  font-style: italic
+  line-height: 32px / (1.777 * $font-size)
 
 img
   max-width: 100%
@@ -60,16 +65,9 @@ dt,
 .skills li + li::before
   content: "•"
 
-.siteNav
+.siteNav,
+figure
   float: right
-
-.gallery
-  text-align: justify
-  text-align-last: justify
-
-.galleryItem
-  text-align: initial
-  text-align-last: initial
 
 .btn
   text-align: center

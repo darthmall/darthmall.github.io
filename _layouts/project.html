@@ -2,7 +2,7 @@
 layout: page
 ---
 {% if page.abstract %}<p class="blurb">{{ page.abstract }}</p>{% endif %}
-<aside class="left">
+<aside>
   <dl>
     {% if page.client %}
       <dt>Client</dt>
@@ -30,8 +30,6 @@ layout: page
   </dl>
 </aside>
 
-<article class="main">
-  {{ content }}
-</article>
+{{ content }}
 
 {% include projects.html %}

@@ -1,7 +1,15 @@
 html
+  color: $text-color
   font-family: $body-font
   font-size: $font-size
   line-height: $line-height
+
+h1,
+h2,
+h3,
+header,
+dd
+  color: $black
 
 h1
   font-size: 4.209em
@@ -34,10 +42,17 @@ ul
   // Selected experimentally using 18px/28px Chivo
   max-width: 58ch
 
+figcaption
+  font-size: 0.75em
+  font-style: italic
+  line-height: 20px / (0.75 * $font-size)
+  text-align: center
+
 .blurb
   font-size: 1.777em
   font-style: italic
   line-height: 32px / (1.777 * $font-size)
+  max-width: 46ch
 
 img
   max-width: 100%

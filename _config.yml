@@ -27,7 +27,7 @@ location: Brooklyn, NY
 defaults:
   - scope:
       path: ""
-      type: projects
+      type: portfolio
     values:
       layout: project
       
@@ -36,7 +36,7 @@ sass:
   style: compressed
 
 collections:
-  projects:
+  portfolio:
     output: true
     permalink: :collection/:name
   career:

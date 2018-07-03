@@ -3,14 +3,18 @@ layout: page
 ---
 {% if page.abstract %}<p class="blurb">{{ page.abstract }}</p>{% endif %}
 <aside>
-  <dl>
+  <dl class="inline">
     {% if page.client %}
-      <dt>Client</dt>
-      <dd>{{ page.client }}</dd>
+      <div>
+        <dt>Client</dt>
+        <dd>{{ page.client }}</dd>
+      </div>
     {% endif %}
     {% if page.repo %}
-      <dt>Repository</dt>
-      <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
+      <div>
+        <dt>Repository</dt>
+        <dd><a href="{{ page.repo }}" target="_blank">{{ page.repo }}</a></dd>
+      </div>
     {% endif %}
   </dl>
 

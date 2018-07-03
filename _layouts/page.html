@@ -3,7 +3,7 @@ layout: base
 ---
 <header>
   <a href="/" class="siteTitle">{{ site.title }}</a>
-  <nav class="siteNav">
+  <nav class="siteNav inline">
     <a href="/portfolio">portfolio</a>
     <a href="/about">About</a>
   </nav>
@@ -15,30 +15,41 @@ layout: base
 
 <footer class="left gridFooter">
   <address>
-    <dl>
-      <dt>
-        Email
-      </dt>
-      <dd>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      </dd>
+    <dl class="inline">
+      <div>
+        <dt>
+          City
+        </dt>
+        <dd>{{ site.location }}</dd>
+      </div>
 
-      <dt class="twitter">
-        Twitter
-      </dt>
-      <dd>
-        <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
-      </dd>
-      <dt class="github">
-        GitHub
-      </dt>
-      <dd>
-        <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
-      </dd>
-      <dt>
-        City
-      </dt>
-      <dd>{{ site.location }}</dd>
+      <div>
+        <dt>
+          Email
+        </dt>
+        <dd>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </dd>
+      </div>
+
+      <div>
+        <dt>
+          Twitter
+        </dt>
+        <dd>
+          <a href="https://twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>
+        </dd>
+      </div>
+
+      <div>
+        <dt>
+          GitHub
+        </dt>
+        <dd>
+          <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
+        </dd>
+      </div>
+
     </dl>
   </address>
   

@@ -8,7 +8,8 @@ body
   margin: $margin
   max-width: 1320px
 
-.portfolio h1
+.portfolio h1,
+.about h1
   display: none
 
 p,
@@ -75,9 +76,12 @@ hr
   margin: $md-space 0
   padding: $md-space $xl-space
 
-.siteNav a
+.inline > *
   display: inline-block
   margin-left: $xl-space
+
+.inline > *:first-child
+  margin-left: 0
 
 .skills
   li + li

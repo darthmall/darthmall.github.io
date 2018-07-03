@@ -17,7 +17,7 @@
 @supports (display: grid)
   body
     display: grid
-    grid-template-columns: minmax($margin, 1fr) minmax(auto, $max-width) minmax($margin, 1fr)
+    grid-template-columns: minmax($margin, auto) minmax(auto, $max-width) minmax($margin, auto)
 
   body > *
     grid-column: 2 / 3
@@ -30,7 +30,37 @@
     grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr))
 
   .galleryItem
-    display: initial
+    display: block
+    position: relative
+
+    .overlay
+      background-color: rgba(255, 255, 255, 0.8)
+      display: flex
+      flex-direction: column-reverse
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      opacity: 0
+      padding: $md-space
+      transition: opacity 300ms ease-out
+
+      .blurb
+        text-align: center
+        order: 3
+        flex: 1 1
+
+      .title
+        order: 2
+
+      .subtitle
+        order: 1
+
+      &:hover
+        opacity: 1
+
+
 
 @media screen and (min-width: 4 * $min-width)
   .gallery

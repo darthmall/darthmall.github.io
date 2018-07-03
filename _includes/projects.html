@@ -4,15 +4,18 @@
   {% for project in projects %}
 
     {% if page.url != project.url %}
-      <article class="project galleryItem fadeIn"
+      <a href="{{ project.url }}" class="plainLink" style="background-color:#{{ project.color }}">
+        <article class="project galleryItem fadeIn"
                style="animation-delay:{{ delay }}ms">
-        <a href="{{ project.url }}">
           {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
           <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">
-          <span class="projectTitle">{{ project.title }}</span>
-          <span class="metadata">{{ project.client }}</span>
-        </a>
-      </article>
+          <div class="overlay">
+            <h3 class="title">{{ project.title }}</h3>
+            <small class="subtitle">{{ project.client }}</small>
+            <p class="blurb">{{ project.abstract }}</p>
+          </div>
+        </article>
+      </a>
       {% assign delay = delay | plus: 60 %}
     {% endif %}
 

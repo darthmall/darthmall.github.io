@@ -2,10 +2,11 @@
 layout: base
 ---
 <header>
+  {% assign toks = page.url | remove_first: "/" | split: "/" %}
   <a href="/" class="siteTitle">{{ site.title }}</a>
   <nav class="siteNav inline">
-    <a href="/portfolio">portfolio</a>
-    <a href="/about">About</a>
+    <a href="/portfolio" {% if toks.first == "portfolio" %}class="selected" {% endif %}>portfolio</a>
+    <a href="/about" {% if toks.first == "about" %}class="selected" {% endif %}>About</a>
   </nav>
 </header>
 

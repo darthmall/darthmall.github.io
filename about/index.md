@@ -2,7 +2,7 @@
 layout: page
 title: About
 classes: about
-permalink: /about
+permalink: /about/index.html
 ---
 
 ## About Me

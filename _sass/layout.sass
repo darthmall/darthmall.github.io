@@ -1,7 +1,37 @@
+.portfolio h1,
+.about h1
+  display: none
+
 .school,
-.job-title
+.job-title,
+.metadata,
+.projectTitle
   display: block
 
+.inline > *,
+.galleryItem,
 .skills li,
 .skills li + li::before
   display: inline-block
+
+@supports (display: grid)
+  body
+    display: grid
+    grid-template-columns: minmax($margin, 1fr) minmax(auto, $max-width) minmax($margin, 1fr)
+
+  body > *
+    grid-column: 2 / 3
+
+  .gridFull
+    grid-column: 1 / -1
+
+  .gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr))
+
+  .galleryItem
+    display: initial
+
+@media screen and (min-width: 4 * $min-width)
+  .gallery
+    grid-template-columns: repeat(4, minmax($min-width, 1fr))

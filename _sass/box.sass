@@ -6,11 +6,7 @@ html
 
 body
   margin: $margin
-  max-width: 1320px
-
-.portfolio h1,
-.about h1
-  display: none
+  max-width: $max-width
 
 p,
 dd
@@ -62,22 +58,16 @@ hr
   margin-right: -$md-space
 
 .galleryItem
-  display: inline-block
   margin: 0 $md-space $md-space 0
-  min-width: 280px - (2 * $md-space)
+  min-width: $min-width - (2 * $md-space)
   max-width: 320px
   width: 30%
-
-.metadata,
-.projectTitle
-  display: block
 
 .btn
   margin: $md-space 0
   padding: $md-space $xl-space
 
 .inline > *
-  display: inline-block
   margin-left: $xl-space
 
 .inline > *:first-child
@@ -92,3 +82,16 @@ hr
 
 .siteNav .selected
   transform: rotate(-3deg)
+
+@supports (display: grid)
+  body
+    margin: 0
+    max-width: none
+
+.gallery
+  max-width: 100%
+
+.galleryItem
+  margin: 0
+  max-width: none
+  width: initial

@@ -35,6 +35,10 @@
   text-decoration: none;
 }
 
+%drop-shadow {
+  box-shadow: 0px 0px $md-space 0px rgba(0, 0, 0, 0.3);
+}
+
 html {
   @extend %body-text-color;
   box-sizing: border-box;
@@ -106,6 +110,15 @@ p,
 ul {
   // Selected experimentally using 18px/28px Chivo
   max-width: 58ch;
+}
+
+figure {
+  margin-top: 4em;
+  margin-bottom: 4em;
+
+  > img {
+    @extend %drop-shadow;
+  }
 }
 
 figcaption {

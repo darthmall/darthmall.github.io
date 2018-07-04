@@ -1,0 +1,30 @@
+.tile-list {
+  margin-right: -$md-space;
+
+  > .tile {
+    display: inline-block;
+    margin-right: $md-space;
+  }
+}
+
+.project-tile {
+  max-width: $min-width;
+  position: relative;
+
+  > .overlay {
+    @extend %unmargin;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    padding: $md-space;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

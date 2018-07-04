@@ -1,11 +1,11 @@
 {% assign projects = site.portfolio | sort: 'order' | reverse %}
 {% assign delay = 500 %}
-<nav class="gallery gridFull">
+<nav class="tile-list">
   {% for project in projects %}
 
     {% if page.url != project.url %}
-      <a href="{{ project.url }}" class="plainLink" style="background-color:#{{ project.color }}">
-        <article class="project galleryItem fadeIn"
+      <a href="{{ project.url }}" class="tile" style="background-color:#{{ project.color }}">
+        <article class="project-tile fadeIn"
                style="animation-delay:{{ delay }}ms">
           {% capture thumbnail %}assets/img/{{ project.thumbnail }}{% endcapture %}
           <img src="{{ thumbnail | relative_url }}" alt="{{ project.title }}: {{ project.abstract }}">

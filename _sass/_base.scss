@@ -54,6 +54,11 @@ body {
   box-sizing: inherit;
 }
 
+/* Margin reset */
+h1, h2, h3, p {
+  margin-bottom: 0;
+}
+
 /* The default top margin for all consecutive content in the normal document
  * flow is equal to half the default line height. This should create a WCAG
  * compliant distance between paragraphs of at least 2.5 times the distance
@@ -61,11 +66,6 @@ body {
  */
 * + * {
   margin-top: $line-height / 2 * 1em;
-}
-
-/* Margin reset */
-h1, h2, h3, p {
-  margin-bottom: 0;
 }
 
 dd {

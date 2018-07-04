@@ -1,0 +1,130 @@
+/**
+ * Define styles for HTML elements as well as some basic placeholder styles
+ * used in multiple components.
+ */
+
+%body-text-color {
+  color: $gray;
+}
+
+%header-text-color {
+  color: $black;
+}
+
+%link-reset {
+  color: inherit;
+  font-style: normal;
+  text-decoration: none;
+}
+
+%label-type {
+  font-family: $header-font;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+html {
+  @extend %body-text-color;
+  box-sizing: border-box;
+  font-family: $body-font;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+body {
+  margin: $margin;
+  max-width: $max-width;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* The default top margin for all consecutive content in the normal document
+ * flow is equal to half the default line height. This should create a WCAG
+ * compliant distance between paragraphs of at least 2.5 times the distance
+ * between consecutive lines within a paragraph.
+ */
+* + * {
+  margin-top: $line-height / 2 * 1em;
+}
+
+h1,
+h2,
+h3,
+header,
+dd {
+  @extend %header-text-color;
+}
+
+h1 {
+  font-size: 4.209em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 76px / (4.209 * $font-size);
+}
+
+h2 {
+  @extend %label-type;
+  line-height: 1.247;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1111;
+}
+
+p,
+ul {
+  // Selected experimentally using 18px/28px Chivo
+  max-width: 58ch;
+}
+
+figcaption {
+  font-size: 0.75em;
+  font-style: italic;
+  line-height: 20px / (0.75 * $font-size);
+  text-align: center;
+}
+
+// FIXME: This should maybe be a component?
+.blurb {
+  font-size: 1.777em;
+  font-style: italic;
+  line-height: 32px / (1.777 * $font-size);
+  max-width: 46ch;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  font-style: italic;
+}
+
+dd {
+  font-style: normal;
+}
+
+dt,
+small {
+  font-family: $mono-font;
+  font-size: 0.802em;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.1085;
+}
+
+@media screen and (min-width: $lg-screen) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

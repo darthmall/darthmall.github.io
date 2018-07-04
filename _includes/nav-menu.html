@@ -1,0 +1,11 @@
+{% comment %}
+The method for setting aria-checked here will probably fail in a case like
+"/portfolio/about-junk" because that string contains both "/portfolio" and
+"/about". What I really want is a startswith test.
+{% endcomment %}
+<nav class="nav-menu">
+  {% for lnk in site.data.navigation %}<a
+    href="{{ lnk.url }}"
+    class="item{% if page.url contains lnk.url %} -selected{% endif %}"
+  >{{ lnk.title }}</a>{% endfor %}
+</nav>

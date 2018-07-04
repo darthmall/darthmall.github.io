@@ -1,0 +1,9 @@
+.btn {
+  @extend %block-text;
+  @extend %header-text-color;
+
+  border: 1px solid $black;
+  display: block;
+  padding: $md-space $lg-space;
+  text-align: center;
+}

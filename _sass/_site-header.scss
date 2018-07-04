@@ -1,0 +1,10 @@
+.site-header {
+  @extend %hbox;
+  justify-content: space-between;
+
+  > .title {
+    @extend %block-text;
+    @extend %header-text-color;
+    display: inline-block;
+  }
+}

@@ -11,18 +11,28 @@
   color: $black;
 }
 
+%highlight-text {
+  color: $orange;
+}
+
+%unmargin {
+  margin: 0;
+}
+
 %link-reset {
-  color: inherit;
   font-style: normal;
   text-decoration: none;
 }
 
-%label-type {
+%block-text {
   font-family: $header-font;
   font-size: 1em;
+  font-style: normal;
   font-weight: 500;
+  line-height: 20px / $font-size;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 html {
@@ -53,6 +63,19 @@ body {
   margin-top: $line-height / 2 * 1em;
 }
 
+/* Margin reset */
+h1, h2, h3, p {
+  margin-bottom: 0;
+}
+
+dd {
+  @extend %unmargin;
+}
+
+h1 + .blurb {
+  margin-top: 0;
+}
+
 h1,
 h2,
 h3,
@@ -69,8 +92,7 @@ h1 {
 }
 
 h2 {
-  @extend %label-type;
-  line-height: 1.247;
+  @extend %block-text;
 }
 
 h3 {
@@ -93,7 +115,6 @@ figcaption {
   text-align: center;
 }
 
-// FIXME: This should maybe be a component?
 .blurb {
   font-size: 1.777em;
   font-style: italic;

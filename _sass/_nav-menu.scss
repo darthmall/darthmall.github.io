@@ -1,0 +1,20 @@
+.nav-menu {
+  @extend %unmargin;
+
+  > .item {
+    @extend %block-text;
+    @extend %header-text-color;
+    display: inline-block;
+
+    & + * {
+      margin-left: $xl-space;
+      margin-top: 0;
+    }
+
+    &.-selected {
+      @extend %highlight-text;
+      text-decoration: underline;
+      transform: rotate(-3deg);
+    }
+  }
+}

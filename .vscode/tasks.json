@@ -6,12 +6,24 @@
         {
             "label": "serve",
             "type": "shell",
-            "command": "bundle",
-            "args": [
-              "exec",
-              "jekyll",
-              "serve"
-            ],
+            "osx": {
+                "command": "bundle",
+                "args": [
+                "exec",
+                "jekyll",
+                "serve"
+                ],
+            },
+            "windows": {
+                "command": "wsl",
+                "args": [
+                    "GEM_HOME=~/gems",
+                    "~/gems/bin/bundle",
+                    "exec",
+                    "jekyll",
+                    "serve"
+                ]
+            },
             "presentation": {
               "echo": true,
               "reveal": "always",

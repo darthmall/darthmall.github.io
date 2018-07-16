@@ -8,9 +8,9 @@
             "type": "shell",
             "command": "bundle",
             "args": [
-              "exec",
-              "jekyll",
-              "serve"
+                "exec",
+                "jekyll",
+                "serve"
             ],
             "presentation": {
               "echo": true,
